@@ -1,14 +1,22 @@
 [gd_scene format=3 uid="uid://ctfyjy061ool"]
 
-[ext_resource type="Texture2D" uid="uid://chubnxracwpc0" path="res://assets/sprites/fruit.png" id="1_xymyp"]
+[ext_resource type="Texture2D" uid="uid://bnwvfnhrfksca" path="res://assets/sprites/claw.png" id="1_nge5k"]
 [ext_resource type="Script" uid="uid://bkfkw233nnj8l" path="res://scripts/claw.gd" id="2_nge5k"]
 
 [node name="claw" type="Node2D" unique_id=1343461891]
 
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1062787217]
+position = Vector2(0, 13)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1008676281]
-position = Vector2(1.9999999, -2.9999962)
+position = Vector2(1.1920929e-07, -2.3841858e-07)
 scale = Vector2(5, 5)
-texture = ExtResource("1_xymyp")
-region_enabled = true
+texture = ExtResource("1_nge5k")
 region_rect = Rect2(20, 16, 9, 16)
 script = ExtResource("2_nge5k")
+
+[node name="RayCast2D" type="RayCast2D" parent="Sprite2D" unique_id=99864328]
+position = Vector2(-2.9802322e-08, 5.9604645e-08)
+scale = Vector2(0.19999999, 0.19999999)
+target_position = Vector2(2.9802322e-08, 11)
+collide_with_areas = true

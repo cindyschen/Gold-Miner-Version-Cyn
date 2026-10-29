@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cttvt45eq8t20"]
+
+[ext_resource type="Script" uid="uid://fcmh0fpoo6ap" path="res://scripts/smallGold.gd" id="1_3qlfx"]
+[ext_resource type="Texture2D" uid="uid://bejxvhtgb2qd3" path="res://assets/sprites/gold.png" id="2_5igxd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bd64o"]
+radius = 30.149628
+
+[node name="smallGold" type="Area2D" unique_id=902899429]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("1_3qlfx")
+
+[node name="smallGoldSprite" type="Sprite2D" parent="." unique_id=1651758820]
+scale = Vector2(3, 3)
+texture = ExtResource("2_5igxd")
+region_rect = Rect2(3, 22, 10, 9)
+
+[node name="smallGoldCollision" type="CollisionShape2D" parent="." unique_id=83312666]
+position = Vector2(1, -1)
+shape = SubResource("CircleShape2D_bd64o")

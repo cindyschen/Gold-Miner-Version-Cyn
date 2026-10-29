@@ -1,11 +1,20 @@
-[gd_scene format=3 uid="uid://cqr6s2ng4ivi4"]
+[gd_scene format=3 uid="uid://21xw4mhf2kd"]
 
-[ext_resource type="Texture2D" uid="uid://chubnxracwpc0" path="res://assets/sprites/fruit.png" id="1_1di36"]
+[ext_resource type="Texture2D" uid="uid://bmo6305uxx108" path="res://assets/sprites/rock.png" id="1_1di36"]
+[ext_resource type="Script" uid="uid://co8f1i3rwl86p" path="res://scripts/rock.gd" id="1_mek2u"]
 
-[node name="rock" type="Node2D" unique_id=1789849383]
+[sub_resource type="CircleShape2D" id="CircleShape2D_1he41"]
+radius = 30.413813
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1651758820]
-scale = Vector2(10, 10)
+[node name="rock" type="Area2D" unique_id=902899429]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("1_mek2u")
+
+[node name="RockSprite" type="Sprite2D" parent="." unique_id=1651758820]
+scale = Vector2(5, 5)
 texture = ExtResource("1_1di36")
-region_enabled = true
 region_rect = Rect2(3, 22, 10, 9)
+
+[node name="RockCollision" type="CollisionShape2D" parent="." unique_id=563610428]
+position = Vector2(-1, -3)
+shape = SubResource("CircleShape2D_1he41")

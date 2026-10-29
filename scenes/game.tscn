@@ -1,17 +1,71 @@
 [gd_scene format=3 uid="uid://613g3k1tuebk"]
 
+[ext_resource type="Script" uid="uid://h30topmttrnc" path="res://scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://kv0rqte28qkt" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://cqr6s2ng4ivi4" path="res://scenes/rock.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cqr6s2ng4ivi4" path="res://scenes/gold.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://ctfyjy061ool" path="res://scenes/claw.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://21xw4mhf2kd" path="res://scenes/rock.tscn" id="4_iywne"]
+[ext_resource type="PackedScene" uid="uid://cttvt45eq8t20" path="res://scenes/smallgold.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://crnhtjpenxksn" path="res://scenes/diamond.tscn" id="7_u5sy4"]
+[ext_resource type="FontFile" uid="uid://co840at5ck4b2" path="res://assets/fonts/Refuel Eb Cond.otf" id="8_gee14"]
 
 [node name="Node2D" type="Node2D" unique_id=41017793]
+script = ExtResource("1_lbhrr")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=321520134]
 
 [node name="Player" parent="." unique_id=513096976 instance=ExtResource("1_uwrxv")]
 position = Vector2(-1, -269)
 
-[node name="rock" parent="." unique_id=1789849383 instance=ExtResource("2_yqjtg")]
-
 [node name="claw" parent="." unique_id=1343461891 instance=ExtResource("3_lnu2h")]
 position = Vector2(2, -221)
+
+[node name="Timer" type="Timer" parent="." unique_id=1784494850]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[node name="Objects" type="Node2D" parent="." unique_id=898619204]
+
+[node name="gold" parent="Objects" unique_id=1789849383 instance=ExtResource("2_yqjtg")]
+
+[node name="gold2" parent="Objects" unique_id=902899429 instance=ExtResource("2_yqjtg")]
+position = Vector2(-381.99997, 135.99998)
+
+[node name="smallGold" parent="Objects" unique_id=2146324579 instance=ExtResource("6_p57ef")]
+position = Vector2(-241.99998, -94.99999)
+
+[node name="rock" parent="Objects" unique_id=1751139347 instance=ExtResource("4_iywne")]
+position = Vector2(193.99998, -32.999996)
+
+[node name="diamond" parent="Objects" unique_id=1261165441 instance=ExtResource("7_u5sy4")]
+position = Vector2(255.99998, 159.99998)
+
+[node name="Labels" type="Node2D" parent="." unique_id=1669983485]
+
+[node name="ScoreLabel" type="Label" parent="Labels" unique_id=998079577]
+offset_left = -560.0
+offset_top = -320.0
+offset_right = -360.0
+offset_bottom = -290.0
+theme_override_fonts/font = ExtResource("8_gee14")
+theme_override_font_sizes/font_size = 24
+text = "Score: x"
+
+[node name="TimerLabel" type="Label" parent="Labels" unique_id=1035254522]
+offset_left = -560.0
+offset_top = -270.0
+offset_right = -360.0
+offset_bottom = -240.0
+theme_override_fonts/font = ExtResource("8_gee14")
+theme_override_font_sizes/font_size = 24
+text = "Time Remaining: x"
+
+[node name="GoalLabel" type="Label" parent="Labels" unique_id=454247257]
+offset_left = -560.0
+offset_top = -295.0
+offset_right = -360.0
+offset_bottom = -265.0
+theme_override_fonts/font = ExtResource("8_gee14")
+theme_override_font_sizes/font_size = 24
+text = "Goal: x"
