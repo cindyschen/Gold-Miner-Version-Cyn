@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://dwak76m1bp6gm"]
+
+[ext_resource type="Script" uid="uid://cahcev0i5njmq" path="res://scripts/pause_menu.gd" id="1_myx47"]
+[ext_resource type="Theme" uid="uid://cy1hwpgarqqen" path="res://scenes/menu.tres" id="1_n87rw"]
+
+[node name="PauseMenu" type="Control" unique_id=1244187670]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_myx47")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1712428855]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_n87rw")
+theme_type_variation = &"PausePanelContainer"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=726857646]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 32
+
+[node name="ResumeButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=201005322]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Resume"
+
+[node name="RestartButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1210017662]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Restart"
+
+[node name="MenuButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1381577198]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Main Menu"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]

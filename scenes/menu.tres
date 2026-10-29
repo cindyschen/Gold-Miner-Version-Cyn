@@ -1,0 +1,36 @@
+[gd_resource type="Theme" format=3 uid="uid://cy1hwpgarqqen"]
+
+[ext_resource type="FontFile" uid="uid://co840at5ck4b2" path="res://assets/fonts/Refuel Eb Cond.otf" id="1_is4b8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
+bg_color = Color(1, 0.85882354, 0.6901961, 1)
+border_width_bottom = 7
+border_color = Color(1, 0.8, 0.72156864, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kkmtd"]
+bg_color = Color(1, 0.9801667, 0.83, 0.99607843)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 0.47000003, 0.47000003, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w2b1v"]
+bg_color = Color(1, 0.9801667, 0.83, 0.5176471)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 0.85882354, 0.6901961, 1)
+
+[resource]
+default_font = ExtResource("1_is4b8")
+Button/colors/font_color = Color(1, 0.47000003, 0.47000003, 1)
+Button/font_sizes/font_size = 64
+Button/fonts/font = ExtResource("1_is4b8")
+Button/styles/normal = SubResource("StyleBoxFlat_wu84c")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_kkmtd")
+PausePanelContainer/base_type = &"PanelContainer"
+PausePanelContainer/styles/panel = SubResource("StyleBoxFlat_w2b1v")
+RichTextLabel/colors/default_color = Color(1, 0.47000003, 0.47000003, 1)
+RichTextLabel/font_sizes/normal_font_size = 96

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cttvt45eq8t20" path="res://scenes/smallgold.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://crnhtjpenxksn" path="res://scenes/diamond.tscn" id="7_u5sy4"]
 [ext_resource type="FontFile" uid="uid://co840at5ck4b2" path="res://assets/fonts/Refuel Eb Cond.otf" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://dwak76m1bp6gm" path="res://scenes/pause_menu.tscn" id="9_0tnpc"]
 
 [node name="Node2D" type="Node2D" unique_id=41017793]
 script = ExtResource("1_lbhrr")
@@ -69,3 +70,5 @@ offset_bottom = -265.0
 theme_override_fonts/font = ExtResource("8_gee14")
 theme_override_font_sizes/font_size = 24
 text = "Goal: x"
+
+[node name="PauseMenu" parent="." unique_id=1244187670 instance=ExtResource("9_0tnpc")]

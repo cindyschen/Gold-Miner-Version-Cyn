@@ -1,31 +1,8 @@
 [gd_scene format=3 uid="uid://dqcw41twtc73x"]
 
 [ext_resource type="Script" uid="uid://qyqdrsd07mc1" path="res://scripts/main_menu.gd" id="1_ekxnf"]
-[ext_resource type="FontFile" uid="uid://co840at5ck4b2" path="res://assets/fonts/Refuel Eb Cond.otf" id="2_bqqt6"]
+[ext_resource type="Theme" uid="uid://cy1hwpgarqqen" path="res://scenes/menu.tres" id="2_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://bejxvhtgb2qd3" path="res://assets/sprites/gold.png" id="3_bqqt6"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
-bg_color = Color(1, 0.85882354, 0.6901961, 1)
-border_width_bottom = 7
-border_color = Color(1, 0.8, 0.72156864, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kkmtd"]
-bg_color = Color(1, 0.9801667, 0.83, 0.99607843)
-border_width_left = 6
-border_width_top = 6
-border_width_right = 6
-border_width_bottom = 6
-border_color = Color(1, 0.47000003, 0.47000003, 1)
-
-[sub_resource type="Theme" id="Theme_1he41"]
-default_font = ExtResource("2_bqqt6")
-Button/colors/font_color = Color(1, 0.47000003, 0.47000003, 1)
-Button/font_sizes/font_size = 64
-Button/fonts/font = ExtResource("2_bqqt6")
-Button/styles/normal = SubResource("StyleBoxFlat_wu84c")
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_kkmtd")
-RichTextLabel/colors/default_color = Color(1, 0.47000003, 0.47000003, 1)
-RichTextLabel/font_sizes/normal_font_size = 96
 
 [node name="Main Menu" type="Control" unique_id=1653671232]
 layout_mode = 3
@@ -43,35 +20,38 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_1he41")
+theme = ExtResource("2_bqqt6")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=2095891480]
 layout_mode = 2
-theme_override_constants/margin_left = 100
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1066684588]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/separation = 24
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=834429469]
-custom_minimum_size = Vector2(1000, 200)
+custom_minimum_size = Vector2(900, 200)
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Gold Miner: Version Cyn
 "
+horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1247953501]
+[node name="PlayButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1247953501]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
+offset_transform_enabled = true
 text = "Play
 
 "
 
 [node name="Button2" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1713942501]
+visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -81,6 +61,7 @@ text = "Play
 "
 
 [node name="Button3" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=354686333]
+visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -91,11 +72,11 @@ text = "Play
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=66572049]
 layout_mode = 0
-offset_left = 543.0
-offset_top = 209.0
-offset_right = 583.0
-offset_bottom = 249.0
+offset_left = 584.0
+offset_top = 215.0
+offset_right = 628.5
+offset_bottom = 257.625
 scale = Vector2(8, 8)
 texture = ExtResource("3_bqqt6")
 
-[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_button_pressed"]
