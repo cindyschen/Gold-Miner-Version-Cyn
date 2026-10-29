@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ctfyjy061ool"]
+
+[ext_resource type="Texture2D" uid="uid://chubnxracwpc0" path="res://assets/sprites/fruit.png" id="1_xymyp"]
+[ext_resource type="Script" uid="uid://bkfkw233nnj8l" path="res://scripts/claw.gd" id="2_nge5k"]
+
+[node name="claw" type="Node2D" unique_id=1343461891]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1008676281]
+position = Vector2(1.9999999, -2.9999962)
+scale = Vector2(5, 5)
+texture = ExtResource("1_xymyp")
+region_enabled = true
+region_rect = Rect2(20, 16, 9, 16)
+script = ExtResource("2_nge5k")

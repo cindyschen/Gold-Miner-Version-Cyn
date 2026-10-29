@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://kv0rqte28qkt"]
+
+[ext_resource type="Texture2D" uid="uid://noukx841uffr" path="res://assets/sprites/slime_green.png" id="1_3vyb7"]
+
+[node name="Player" type="CharacterBody2D" unique_id=513096976]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=739824384]
+scale = Vector2(5, 5)
+texture = ExtResource("1_3vyb7")
+region_enabled = true
+region_rect = Rect2(53, 33, 14, 15)

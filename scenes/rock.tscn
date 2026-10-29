@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cqr6s2ng4ivi4"]
+
+[ext_resource type="Texture2D" uid="uid://chubnxracwpc0" path="res://assets/sprites/fruit.png" id="1_1di36"]
+
+[node name="rock" type="Node2D" unique_id=1789849383]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1651758820]
+scale = Vector2(10, 10)
+texture = ExtResource("1_1di36")
+region_enabled = true
+region_rect = Rect2(3, 22, 10, 9)
