@@ -1,0 +1,2 @@
+# Gold Miner Version Cyn
+
