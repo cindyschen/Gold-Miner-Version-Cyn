@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Gold Miner: Version Cyn"
-run/main_scene="uid://dwak76m1bp6gm"
+run/main_scene="uid://dqcw41twtc73x"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
