@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://c7mc41iqr7co2"]
+
+[ext_resource type="Script" uid="uid://cgbdegacgmexk" path="res://scripts/shop.gd" id="1_xfvoa"]
+[ext_resource type="Theme" uid="uid://cy1hwpgarqqen" path="res://scenes/menu.tres" id="2_1l46r"]
+
+[node name="Shop" type="Control" unique_id=1244187670]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xfvoa")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1712428855]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_1l46r")
+theme_type_variation = &"ShopPanelContainer"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=726857646]
+custom_minimum_size = Vector2(0, 500)
+custom_maximum_size = Vector2(-1, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 32
+
+[node name="ShopLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=1020998780]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+size_flags_vertical = 0
+offset_transform_enabled = true
+theme_override_constants/outline_size = 12
+text = "SHOP"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="ItemsContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=767749244]
+custom_minimum_size = Vector2(700, 207)
+custom_maximum_size = Vector2(700, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="ContinueButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=476491006]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+offset_transform_enabled = true
+text = "Continue"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]

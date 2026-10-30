@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://bl452ktrkekli" path="res://scripts/lost_screen.gd" id="10_nw3p2"]
 [ext_resource type="PackedScene" uid="uid://cqpiyhf2x6lj1" path="res://scenes/screens/lost_screen.tscn" id="11_ngeu7"]
 [ext_resource type="PackedScene" uid="uid://chqawjpjc5bji" path="res://scenes/screens/win_screen.tscn" id="12_4g8we"]
+[ext_resource type="PackedScene" uid="uid://43t2cabbk8nt" path="res://scenes/dynamite_ui.tscn" id="16_e25t1"]
 
 [node name="stage3" type="Node2D" unique_id=41017793]
 script = ExtResource("1_6xofg")
@@ -121,5 +122,17 @@ visible = false
 
 [node name="WinScreen" parent="." unique_id=983766163 instance=ExtResource("12_4g8we")]
 visible = false
+
+[node name="DynamiteUI" parent="." unique_id=1976093421 instance=ExtResource("16_e25t1")]
+z_index = -1
+anchors_preset = 10
+anchor_bottom = 0.0
+offset_left = 70.0
+offset_top = -270.0
+offset_right = 70.0
+offset_bottom = -270.0
+grow_vertical = 1
+
+[node name="Dynamite" type="Node2D" parent="." unique_id=1459992516]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

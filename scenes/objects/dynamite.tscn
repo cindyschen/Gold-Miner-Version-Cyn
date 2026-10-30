@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cxbiq3sgrts4g"]
+
+[ext_resource type="Script" uid="uid://bwdm82dsqeiyn" path="res://scripts/dynamite.gd" id="1_5xtdh"]
+[ext_resource type="Texture2D" uid="uid://brqi2cvcd7v27" path="res://assets/sprites/dynamite.png" id="2_axncg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1he41"]
+size = Vector2(12.8958235, 49.660595)
+
+[node name="dynamite" type="Area2D" unique_id=902899429]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("1_5xtdh")
+
+[node name="dynamiteSprite" type="Sprite2D" parent="." unique_id=1651758820]
+scale = Vector2(3, 3)
+texture = ExtResource("2_axncg")
+region_rect = Rect2(3, 22, 10, 9)
+
+[node name="dynamiteCollision" type="CollisionShape2D" parent="." unique_id=83312666]
+position = Vector2(0.5593584, -0.44064158)
+rotation = 0.7853982
+scale = Vector2(0.9999993, 0.9999993)
+shape = SubResource("RectangleShape2D_1he41")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

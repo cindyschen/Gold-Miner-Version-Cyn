@@ -1,10 +1,27 @@
 extends Node
 
+const MAX_DYNAMITES = 20
+
 var score = 0
 var goals = [300,1000,2000,3000]
 var stage = 0
-var dynamite = 3
+var dynamite = 0
+var next_stage: String = "res://scenes/stage_2.tscn"
+
+signal dynamite_changed()
 
 func add_points(points: int):
 	score += points
 	print(score)
+	
+func subtract_points(points: int):
+	score -= points
+	print(score)
+	
+func use_dynamite():
+	dynamite -= 1
+	dynamite_changed.emit()
+	
+func add_dynamite():
+	dynamite+= 1
+	dynamite_changed.emit()

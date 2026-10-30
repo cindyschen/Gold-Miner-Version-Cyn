@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://ba2uuopscuilt"]
+
+[ext_resource type="Script" uid="uid://d1qxei57yutw7" path="res://scripts/shop_dynamite.gd" id="1_tlngg"]
+[ext_resource type="Texture2D" uid="uid://b70rrq86q0mhn" path="res://assets/sprites/shopdynamitehighlight.png" id="2_tkvyb"]
+[ext_resource type="Texture2D" uid="uid://bvohyyao7mkp5" path="res://assets/sprites/shopdynamite.png" id="2_tlngg"]
+[ext_resource type="Texture2D" uid="uid://cjc5w4dq27qek" path="res://assets/sprites/shopdynamitedisabled.png" id="4_hk01b"]
+[ext_resource type="Theme" uid="uid://cy1hwpgarqqen" path="res://scenes/menu.tres" id="4_u67qp"]
+
+[node name="shopDynamite" type="VBoxContainer" unique_id=898806892]
+custom_minimum_size = Vector2(144, 144)
+offset_right = 144.0
+offset_bottom = 144.0
+script = ExtResource("1_tlngg")
+
+[node name="shopDynamiteButton" type="TextureButton" parent="." unique_id=1723714847]
+custom_minimum_size = Vector2(144, 144)
+layout_mode = 2
+texture_normal = ExtResource("2_tlngg")
+texture_hover = ExtResource("2_tkvyb")
+texture_disabled = ExtResource("4_hk01b")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="dynamitePrice" type="RichTextLabel" parent="." unique_id=1887877009]
+custom_maximum_size = Vector2(144, 144)
+layout_mode = 2
+theme = ExtResource("4_u67qp")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/line_separation = -15
+theme_override_font_sizes/normal_font_size = 48
+text = "MAXED OUT"
+fit_content = true
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[connection signal="pressed" from="shopDynamiteButton" to="." method="_on_shop_dynamite_button_pressed"]

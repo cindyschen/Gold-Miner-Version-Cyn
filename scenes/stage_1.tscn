@@ -113,9 +113,9 @@ text = "Goal: x"
 z_index = -1
 anchors_preset = 10
 anchor_bottom = 0.0
-offset_left = 100.0
+offset_left = 70.0
 offset_top = -270.0
-offset_right = 100.0
+offset_right = 70.0
 offset_bottom = -270.0
 grow_vertical = 1
 
@@ -127,5 +127,8 @@ visible = false
 
 [node name="WinScreen" parent="." unique_id=983766163 instance=ExtResource("12_jm8fe")]
 visible = false
+
+[node name="Dynamite" type="Node2D" parent="." unique_id=882310191]
+position = Vector2(100, -270)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

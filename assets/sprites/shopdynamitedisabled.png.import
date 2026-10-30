@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h42mofpuyygn"
-path="res://.godot/imported/dynamite.png-d81024d4504bc3daa12d04446f68185e.ctex"
+uid="uid://cjc5w4dq27qek"
+path="res://.godot/imported/shopdynamitedisabled.png-ad343db6b4c3823f224a8d041377ffad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/dynamite.png"
-dest_files=["res://.godot/imported/dynamite.png-d81024d4504bc3daa12d04446f68185e.ctex"]
+source_file="res://assets/sprites/shopdynamitedisabled.png"
+dest_files=["res://.godot/imported/shopdynamitedisabled.png-ad343db6b4c3823f224a8d041377ffad.ctex"]
 
 [params]
 

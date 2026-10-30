@@ -23,6 +23,9 @@ border_width_right = 6
 border_width_bottom = 6
 border_color = Color(1, 0.85882354, 0.6901961, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_axncg"]
+bg_color = Color(1, 0.8, 0.72156864, 1)
+
 [resource]
 default_font = ExtResource("1_is4b8")
 Button/colors/font_color = Color(1, 0.47000003, 0.47000003, 1)
@@ -37,3 +40,5 @@ RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
 RichTextLabel/constants/line_separation = 0
 RichTextLabel/constants/table_h_separation = 3
 RichTextLabel/font_sizes/normal_font_size = 96
+ShopPanelContainer/base_type = &"PanelContainer"
+ShopPanelContainer/styles/panel = SubResource("StyleBoxFlat_axncg")
