@@ -8,11 +8,19 @@ extends VBoxContainer
 var price = randi_range(50,100)
 
 func _ready():
+	GameManager.money_changed.connect(update)
+	dynamite_price.text = "$" + str(price)
 	if GameManager.dynamite == GameManager.MAX_DYNAMITES:
 		shop_dynamite_button.disabled = true
 		dynamite_price.text = "MAXED OUT"
-	else:
-		dynamite_price.text = "$" + str(price)
+	elif GameManager.score < price:
+		shop_dynamite_button.disabled = true
+		
+func update():
+	if GameManager.score < price:
+		shop_dynamite_button.disabled = true
+	
+		
 
 
 func _on_shop_dynamite_button_pressed() -> void:
