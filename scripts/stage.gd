@@ -16,7 +16,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	score_label.text = "Score: " + str(GameManager.score)
+	score_label.text = "Money: " + str(GameManager.score)
 	timer_label.text = "Time Remaining: " + str(int(timer.time_left))
 
 func _on_timer_timeout() -> void:
