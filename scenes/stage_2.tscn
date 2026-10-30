@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://booxi4n5ps2ic"]
 
-[ext_resource type="Script" uid="uid://h30topmttrnc" path="res://scripts/stage_1.gd" id="1_x5gfk"]
+[ext_resource type="Script" uid="uid://h30topmttrnc" path="res://scripts/stage.gd" id="1_x5gfk"]
 [ext_resource type="PackedScene" uid="uid://kv0rqte28qkt" path="res://scenes/player.tscn" id="2_sv3jd"]
 [ext_resource type="PackedScene" uid="uid://ctfyjy061ool" path="res://scenes/claw.tscn" id="3_fbmvv"]
-[ext_resource type="PackedScene" uid="uid://cqr6s2ng4ivi4" path="res://scenes/gold.tscn" id="4_5gc2f"]
-[ext_resource type="PackedScene" uid="uid://cttvt45eq8t20" path="res://scenes/smallgold.tscn" id="5_gmy77"]
-[ext_resource type="PackedScene" uid="uid://21xw4mhf2kd" path="res://scenes/rock.tscn" id="6_bgl7i"]
-[ext_resource type="PackedScene" uid="uid://crnhtjpenxksn" path="res://scenes/diamond.tscn" id="7_vhu3l"]
+[ext_resource type="PackedScene" uid="uid://cqr6s2ng4ivi4" path="res://scenes/objects/biggold.tscn" id="4_5gc2f"]
+[ext_resource type="PackedScene" uid="uid://cttvt45eq8t20" path="res://scenes/objects/smallgold.tscn" id="5_gmy77"]
+[ext_resource type="PackedScene" uid="uid://21xw4mhf2kd" path="res://scenes/objects/rock.tscn" id="6_bgl7i"]
+[ext_resource type="PackedScene" uid="uid://cbf504jokb3hu" path="res://scenes/objects/giant_gold.tscn" id="7_sv3jd"]
+[ext_resource type="PackedScene" uid="uid://botblmta3vhof" path="res://scenes/objects/biggoldii.tscn" id="8_fbmvv"]
 [ext_resource type="FontFile" uid="uid://co840at5ck4b2" path="res://assets/fonts/Refuel Eb Cond.otf" id="8_rg1e5"]
 [ext_resource type="PackedScene" uid="uid://dwak76m1bp6gm" path="res://scenes/pause_menu.tscn" id="9_5dmcs"]
 [ext_resource type="Script" uid="uid://bl452ktrkekli" path="res://scripts/lost_screen.gd" id="10_8mhh4"]
@@ -31,19 +32,38 @@ autostart = true
 
 [node name="Objects" type="Node2D" parent="." unique_id=898619204]
 
-[node name="gold" parent="Objects" unique_id=1789849383 instance=ExtResource("4_5gc2f")]
+[node name="biggold" parent="Objects" unique_id=1789849383 instance=ExtResource("4_5gc2f")]
+position = Vector2(427.99997, 144.99998)
 
-[node name="gold2" parent="Objects" unique_id=902899429 instance=ExtResource("4_5gc2f")]
-position = Vector2(-381.99997, 135.99998)
+[node name="biggold2" parent="Objects" unique_id=902899429 instance=ExtResource("4_5gc2f")]
+position = Vector2(-338, 14.000008)
 
 [node name="smallGold" parent="Objects" unique_id=2146324579 instance=ExtResource("5_gmy77")]
-position = Vector2(-241.99998, -94.99999)
+position = Vector2(-321, -117)
+
+[node name="smallGold2" parent="Objects" unique_id=1924130385 instance=ExtResource("5_gmy77")]
+position = Vector2(-362, -69)
+
+[node name="smallGold3" parent="Objects" unique_id=375352256 instance=ExtResource("5_gmy77")]
+position = Vector2(-265, 62.999985)
+
+[node name="smallGold4" parent="Objects" unique_id=1130004275 instance=ExtResource("5_gmy77")]
+position = Vector2(-262, 133)
+
+[node name="smallGold5" parent="Objects" unique_id=843991980 instance=ExtResource("5_gmy77")]
+position = Vector2(-148, 55.000008)
 
 [node name="rock" parent="Objects" unique_id=1751139347 instance=ExtResource("6_bgl7i")]
-position = Vector2(193.99998, -32.999996)
+position = Vector2(370, -38)
 
-[node name="diamond" parent="Objects" unique_id=1261165441 instance=ExtResource("7_vhu3l")]
-position = Vector2(255.99998, 159.99998)
+[node name="rock2" parent="Objects" unique_id=1763591371 instance=ExtResource("6_bgl7i")]
+position = Vector2(157, 72)
+
+[node name="giantGold" parent="Objects" unique_id=647448207 instance=ExtResource("7_sv3jd")]
+position = Vector2(324.99997, 227.99998)
+
+[node name="biggold3" parent="Objects" unique_id=962535828 instance=ExtResource("8_fbmvv")]
+position = Vector2(321.99997, 93.99999)
 
 [node name="Labels" type="Node2D" parent="." unique_id=1669983485]
 
@@ -85,10 +105,14 @@ theme_override_font_sizes/font_size = 24
 text = "Goal: x"
 
 [node name="PauseMenu" parent="." unique_id=1244187670 instance=ExtResource("9_5dmcs")]
+visible = false
 script = ExtResource("10_8mhh4")
 
 [node name="LostScreen" parent="." unique_id=726103261 instance=ExtResource("11_ogfy0")]
+visible = false
 
 [node name="WinScreen" parent="." unique_id=983766163 instance=ExtResource("12_axq8d")]
+visible = false
+next_stage = "res://scenes/stage_3.tscn"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

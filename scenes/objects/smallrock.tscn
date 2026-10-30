@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cr7camf0iuxdr"]
+
+[ext_resource type="Script" uid="uid://cbwvexj6wtws8" path="res://scripts/smallrock.gd" id="1_is6rs"]
+[ext_resource type="Texture2D" uid="uid://dxtunlpydsr4l" path="res://assets/sprites/smallrock.png" id="2_is6rs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1he41"]
+radius = 22.022715
+
+[node name="smallrock" type="Area2D" unique_id=902899429]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("1_is6rs")
+
+[node name="smallRockSprite" type="Sprite2D" parent="." unique_id=1651758820]
+scale = Vector2(3, 3)
+texture = ExtResource("2_is6rs")
+region_rect = Rect2(3, 22, 10, 9)
+
+[node name="smallRockCollision" type="CollisionShape2D" parent="." unique_id=563610428]
+position = Vector2(-3.5527137e-15, 2)
+shape = SubResource("CircleShape2D_1he41")

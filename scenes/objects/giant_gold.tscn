@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cbf504jokb3hu"]
+
+[ext_resource type="Script" uid="uid://bittp7ivpgxh4" path="res://scripts/giant_gold.gd" id="1_dwd60"]
+[ext_resource type="Texture2D" uid="uid://l73nyche3vn5" path="res://assets/sprites/giantgold.png" id="2_efcr1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fxwa4"]
+radius = 69.18091
+height = 142.3516
+
+[node name="giantGold" type="Area2D" unique_id=902899429]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("1_dwd60")
+
+[node name="giantGoldSprite" type="Sprite2D" parent="." unique_id=1651758820]
+scale = Vector2(3, 3)
+texture = ExtResource("2_efcr1")
+region_rect = Rect2(3, 22, 10, 9)
+
+[node name="giantGoldCollision" type="CollisionShape2D" parent="." unique_id=563610428]
+position = Vector2(-1.0000001, 2.3841858e-07)
+rotation = 1.4992378
+shape = SubResource("CapsuleShape2D_fxwa4")

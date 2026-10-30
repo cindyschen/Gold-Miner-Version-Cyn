@@ -1,19 +1,20 @@
-[gd_scene format=3 uid="uid://cqr6s2ng4ivi4"]
+[gd_scene format=3 uid="uid://bkslawutkk48"]
 
-[ext_resource type="Script" uid="uid://dcejtw4ce8b8w" path="res://scripts/gold.gd" id="1_yna14"]
+[ext_resource type="Script" uid="uid://cdm10ldm288e3" path="res://scripts/gold.gd" id="1_yna14"]
 [ext_resource type="Texture2D" uid="uid://bejxvhtgb2qd3" path="res://assets/sprites/gold.png" id="2_yna14"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1he41"]
-radius = 50.01
+[sub_resource type="CircleShape2D" id="CircleShape2D_bd64o"]
+radius = 32.01562
 
-[node name="gold" type="Area2D" unique_id=902899429]
+[node name="Gold" type="Area2D" unique_id=902899429]
 scale = Vector2(0.99999994, 0.99999994)
 script = ExtResource("1_yna14")
 
 [node name="GoldSprite" type="Sprite2D" parent="." unique_id=1651758820]
-scale = Vector2(5, 5)
+scale = Vector2(3, 3)
 texture = ExtResource("2_yna14")
 region_rect = Rect2(3, 22, 10, 9)
 
 [node name="GoldCollision" type="CollisionShape2D" parent="." unique_id=83312666]
-shape = SubResource("CircleShape2D_1he41")
+position = Vector2(-5.9604645e-08, 5.9604645e-08)
+shape = SubResource("CircleShape2D_bd64o")

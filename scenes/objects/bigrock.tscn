@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c8lyxo4oc1np1"]
+
+[ext_resource type="Script" uid="uid://nuf5sr4on2q3" path="res://scripts/bigrock.gd" id="1_b7afm"]
+[ext_resource type="Texture2D" uid="uid://dloj7cnmjxnxo" path="res://assets/sprites/bigrock.png" id="2_b7afm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gyhte"]
+radius = 46.04347
+
+[node name="bigrock" type="Area2D" unique_id=902899429]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("1_b7afm")
+
+[node name="bigRockSprite" type="Sprite2D" parent="." unique_id=1651758820]
+scale = Vector2(3, 3)
+texture = ExtResource("2_b7afm")
+region_rect = Rect2(3, 22, 10, 9)
+
+[node name="bigRockCollision" type="CollisionShape2D" parent="." unique_id=563610428]
+position = Vector2(2.0000002, 5.0000005)
+rotation = 1.4992378
+shape = SubResource("CircleShape2D_gyhte")

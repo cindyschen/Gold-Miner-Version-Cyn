@@ -7,15 +7,16 @@
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1008676281]
 position = Vector2(1.1920929e-07, -2.3841858e-07)
-scale = Vector2(5, 5)
+scale = Vector2(3, 3)
 texture = ExtResource("1_nge5k")
+offset = Vector2(0, 6)
 region_rect = Rect2(20, 16, 9, 16)
 script = ExtResource("2_nge5k")
 
 [node name="RayCast2D" type="RayCast2D" parent="Sprite2D" unique_id=99864328]
 position = Vector2(-2.9802322e-08, 5.9604645e-08)
 scale = Vector2(0.19999999, 0.19999999)
-target_position = Vector2(2.9802322e-08, 11)
+target_position = Vector2(-4.967054e-08, 23.333334)
 collide_with_areas = true
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1062787217]

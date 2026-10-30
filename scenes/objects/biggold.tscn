@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cqr6s2ng4ivi4"]
+
+[ext_resource type="Script" uid="uid://dcejtw4ce8b8w" path="res://scripts/biggold.gd" id="1_yna14"]
+[ext_resource type="Texture2D" uid="uid://b0qrfg0xrhov4" path="res://assets/sprites/biggold.png" id="2_1jbac"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1he41"]
+radius = 42.0
+
+[node name="biggold" type="Area2D" unique_id=902899429]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("1_yna14")
+
+[node name="bigGoldSprite" type="Sprite2D" parent="." unique_id=1651758820]
+scale = Vector2(3, 3)
+texture = ExtResource("2_1jbac")
+region_rect = Rect2(3, 22, 10, 9)
+
+[node name="bigGoldCollision" type="CollisionShape2D" parent="." unique_id=83312666]
+position = Vector2(-0.99999994, -1.0000001)
+shape = SubResource("CircleShape2D_1he41")
