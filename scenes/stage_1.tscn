@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://crnhtjpenxksn" path="res://scenes/diamond.tscn" id="7_con43"]
 [ext_resource type="FontFile" uid="uid://co840at5ck4b2" path="res://assets/fonts/Refuel Eb Cond.otf" id="8_ylsql"]
 [ext_resource type="PackedScene" uid="uid://dwak76m1bp6gm" path="res://scenes/pause_menu.tscn" id="9_2tptg"]
-[ext_resource type="Script" uid="uid://bl452ktrkekli" path="res://scripts/lost_screen.gd" id="10_klss1"]
 [ext_resource type="PackedScene" uid="uid://cqpiyhf2x6lj1" path="res://scenes/lost_screen.tscn" id="11_hech3"]
 [ext_resource type="PackedScene" uid="uid://chqawjpjc5bji" path="res://scenes/win_screen.tscn" id="12_jm8fe"]
 
@@ -84,13 +83,9 @@ theme_override_font_sizes/font_size = 24
 text = "Goal: x"
 
 [node name="PauseMenu" parent="." unique_id=1244187670 instance=ExtResource("9_2tptg")]
-visible = false
-script = ExtResource("10_klss1")
 
 [node name="LostScreen" parent="." unique_id=726103261 instance=ExtResource("11_hech3")]
-visible = false
 
 [node name="WinScreen" parent="." unique_id=983766163 instance=ExtResource("12_jm8fe")]
-visible = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
