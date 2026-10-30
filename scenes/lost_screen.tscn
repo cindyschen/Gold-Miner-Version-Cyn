@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cqpiyhf2x6lj1"]
+
+[ext_resource type="Script" uid="uid://bl452ktrkekli" path="res://scripts/lost_screen.gd" id="1_1eaaq"]
+[ext_resource type="Theme" uid="uid://cy1hwpgarqqen" path="res://scenes/menu.tres" id="2_12qoe"]
+
+[node name="LostScreen" type="Control" unique_id=1244187670]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1eaaq")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1712428855]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_12qoe")
+theme_type_variation = &"PausePanelContainer"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=726857646]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 32
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=1020998780]
+custom_minimum_size = Vector2(1000, 200)
+layout_mode = 2
+theme_override_constants/outline_size = 12
+text = "You did not meet the goal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=2058075475]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Restart"
+
+[node name="MenuButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=592914816]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Main Menu"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]

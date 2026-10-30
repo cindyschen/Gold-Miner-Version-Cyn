@@ -50,13 +50,12 @@ text = "Play
 
 "
 
-[node name="Button2" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1713942501]
-visible = false
+[node name="QuitButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1713942501]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
-text = "Play
+text = "Quit
 
 "
 
@@ -80,3 +79,4 @@ scale = Vector2(8, 8)
 texture = ExtResource("3_bqqt6")
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://booxi4n5ps2ic"]
+
+[ext_resource type="Script" uid="uid://djp04v23u4uev" path="res://scripts/stage_2.gd" id="1_x5gfk"]
+[ext_resource type="PackedScene" uid="uid://kv0rqte28qkt" path="res://scenes/player.tscn" id="2_sv3jd"]
+[ext_resource type="PackedScene" uid="uid://ctfyjy061ool" path="res://scenes/claw.tscn" id="3_fbmvv"]
+[ext_resource type="PackedScene" uid="uid://cqr6s2ng4ivi4" path="res://scenes/gold.tscn" id="4_5gc2f"]
+[ext_resource type="PackedScene" uid="uid://cttvt45eq8t20" path="res://scenes/smallgold.tscn" id="5_gmy77"]
+[ext_resource type="PackedScene" uid="uid://21xw4mhf2kd" path="res://scenes/rock.tscn" id="6_bgl7i"]
+[ext_resource type="PackedScene" uid="uid://crnhtjpenxksn" path="res://scenes/diamond.tscn" id="7_vhu3l"]
+[ext_resource type="FontFile" uid="uid://co840at5ck4b2" path="res://assets/fonts/Refuel Eb Cond.otf" id="8_rg1e5"]
+[ext_resource type="PackedScene" uid="uid://dwak76m1bp6gm" path="res://scenes/pause_menu.tscn" id="9_5dmcs"]
+[ext_resource type="Script" uid="uid://bl452ktrkekli" path="res://scripts/lost_screen.gd" id="10_8mhh4"]
+[ext_resource type="PackedScene" uid="uid://cqpiyhf2x6lj1" path="res://scenes/lost_screen.tscn" id="11_ogfy0"]
+[ext_resource type="PackedScene" uid="uid://chqawjpjc5bji" path="res://scenes/win_screen.tscn" id="12_axq8d"]
+
+[node name="stage2" type="Node2D" unique_id=41017793]
+script = ExtResource("1_x5gfk")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=321520134]
+
+[node name="Player" parent="." unique_id=513096976 instance=ExtResource("2_sv3jd")]
+position = Vector2(-1, -269)
+
+[node name="claw" parent="." unique_id=1343461891 instance=ExtResource("3_fbmvv")]
+position = Vector2(2, -221)
+
+[node name="Timer" type="Timer" parent="." unique_id=1784494850]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[node name="Objects" type="Node2D" parent="." unique_id=898619204]
+
+[node name="gold" parent="Objects" unique_id=1789849383 instance=ExtResource("4_5gc2f")]
+
+[node name="gold2" parent="Objects" unique_id=902899429 instance=ExtResource("4_5gc2f")]
+position = Vector2(-381.99997, 135.99998)
+
+[node name="smallGold" parent="Objects" unique_id=2146324579 instance=ExtResource("5_gmy77")]
+position = Vector2(-241.99998, -94.99999)
+
+[node name="rock" parent="Objects" unique_id=1751139347 instance=ExtResource("6_bgl7i")]
+position = Vector2(193.99998, -32.999996)
+
+[node name="diamond" parent="Objects" unique_id=1261165441 instance=ExtResource("7_vhu3l")]
+position = Vector2(255.99998, 159.99998)
+
+[node name="Labels" type="Node2D" parent="." unique_id=1669983485]
+
+[node name="StageLabel" type="Label" parent="Labels" unique_id=1205865145]
+offset_left = -560.0
+offset_top = -320.0
+offset_right = -360.0
+offset_bottom = -290.0
+theme_override_fonts/font = ExtResource("8_rg1e5")
+theme_override_font_sizes/font_size = 24
+text = "Stage: 2
+"
+
+[node name="ScoreLabel" type="Label" parent="Labels" unique_id=1118279030]
+offset_left = -560.0
+offset_top = -295.0
+offset_right = -360.0
+offset_bottom = -265.0
+theme_override_fonts/font = ExtResource("8_rg1e5")
+theme_override_font_sizes/font_size = 24
+text = "Score: x"
+
+[node name="TimerLabel" type="Label" parent="Labels" unique_id=272326]
+offset_left = -560.0
+offset_top = -245.0
+offset_right = -360.0
+offset_bottom = -215.0
+theme_override_fonts/font = ExtResource("8_rg1e5")
+theme_override_font_sizes/font_size = 24
+text = "Time Remaining: x"
+
+[node name="GoalLabel" type="Label" parent="Labels" unique_id=1586037711]
+offset_left = -560.0
+offset_top = -270.0
+offset_right = -360.0
+offset_bottom = -240.0
+theme_override_fonts/font = ExtResource("8_rg1e5")
+theme_override_font_sizes/font_size = 24
+text = "Goal: x"
+
+[node name="PauseMenu" parent="." unique_id=1244187670 instance=ExtResource("9_5dmcs")]
+script = ExtResource("10_8mhh4")
+
+[node name="LostScreen" parent="." unique_id=726103261 instance=ExtResource("11_ogfy0")]
+
+[node name="WinScreen" parent="." unique_id=983766163 instance=ExtResource("12_axq8d")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

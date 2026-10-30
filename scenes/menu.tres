@@ -33,4 +33,7 @@ PanelContainer/styles/panel = SubResource("StyleBoxFlat_kkmtd")
 PausePanelContainer/base_type = &"PanelContainer"
 PausePanelContainer/styles/panel = SubResource("StyleBoxFlat_w2b1v")
 RichTextLabel/colors/default_color = Color(1, 0.47000003, 0.47000003, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+RichTextLabel/constants/line_separation = 0
+RichTextLabel/constants/table_h_separation = 3
 RichTextLabel/font_sizes/normal_font_size = 96

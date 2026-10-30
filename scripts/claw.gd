@@ -1,10 +1,10 @@
 extends Node2D
 
-const SWING_ANGLE= 60.0
+const SWING_ANGLE= 80.0
 const SWING_SPEED= 2.0
 const DROP_SPEED = 500
 const RETRACT_SPEED = 600
-const MAX_DROP = 500
+const PADDING = 100
 
 var direction = Vector2.DOWN
 var dropping = false
@@ -15,6 +15,7 @@ var start_position: Vector2
 var object_retract_speed = 600
 var object: Area2D
 
+@onready var line: Line2D = $"../Line2D"
 @onready var ray_cast: RayCast2D = $RayCast2D
 @onready var pickup_point: Marker2D = $"../Marker2D"
 
@@ -22,6 +23,10 @@ func _ready() -> void:
 	start_position = position
 
 func _process(delta: float) -> void:
+	var screen_size = get_viewport_rect().size
+	line.clear_points()
+	line.add_point(Vector2.ZERO)
+	line.add_point(position)
 	if not dropping and not retracting and not object_retracting:
 		swing_time += delta
 		rotation = deg_to_rad(SWING_ANGLE) * sin(swing_time * SWING_SPEED)
@@ -41,7 +46,7 @@ func _process(delta: float) -> void:
 			retracting = false
 			print("collision")
 		position += direction * DROP_SPEED *delta
-		if position.distance_to(start_position) > MAX_DROP:
+		if position.y > screen_size.y - PADDING or position.x > screen_size.x/2 or position.x < -screen_size.x/2:
 			dropping = false
 			retracting = true
 	elif retracting:
