@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://43t2cabbk8nt"]
+
+[ext_resource type="Script" uid="uid://bsdd4bcjghb6n" path="res://scripts/dynamite_ui.gd" id="1_k1f58"]
+
+[node name="DynamiteUI" type="Control" unique_id=1976093421]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k1f58")
+
+[node name="DynamiteContainer" type="HBoxContainer" parent="." unique_id=1255159151]
+layout_mode = 0
+theme_override_constants/separation = -25

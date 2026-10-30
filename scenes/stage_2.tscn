@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cbf504jokb3hu" path="res://scenes/objects/giant_gold.tscn" id="7_sv3jd"]
 [ext_resource type="PackedScene" uid="uid://botblmta3vhof" path="res://scenes/objects/biggoldii.tscn" id="8_fbmvv"]
 [ext_resource type="FontFile" uid="uid://co840at5ck4b2" path="res://assets/fonts/Refuel Eb Cond.otf" id="8_rg1e5"]
-[ext_resource type="PackedScene" uid="uid://dwak76m1bp6gm" path="res://scenes/pause_menu.tscn" id="9_5dmcs"]
+[ext_resource type="PackedScene" uid="uid://dwak76m1bp6gm" path="res://scenes/screens/pause_menu.tscn" id="9_5dmcs"]
 [ext_resource type="Script" uid="uid://bl452ktrkekli" path="res://scripts/lost_screen.gd" id="10_8mhh4"]
-[ext_resource type="PackedScene" uid="uid://cqpiyhf2x6lj1" path="res://scenes/lost_screen.tscn" id="11_ogfy0"]
-[ext_resource type="PackedScene" uid="uid://chqawjpjc5bji" path="res://scenes/win_screen.tscn" id="12_axq8d"]
+[ext_resource type="PackedScene" uid="uid://cqpiyhf2x6lj1" path="res://scenes/screens/lost_screen.tscn" id="11_ogfy0"]
+[ext_resource type="PackedScene" uid="uid://chqawjpjc5bji" path="res://scenes/screens/win_screen.tscn" id="12_axq8d"]
 
 [node name="stage2" type="Node2D" unique_id=41017793]
 script = ExtResource("1_x5gfk")

@@ -10,10 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://21xw4mhf2kd" path="res://scenes/objects/rock.tscn" id="6_ybch3"]
 [ext_resource type="PackedScene" uid="uid://c8lyxo4oc1np1" path="res://scenes/objects/bigrock.tscn" id="7_ilkkl"]
 [ext_resource type="FontFile" uid="uid://co840at5ck4b2" path="res://assets/fonts/Refuel Eb Cond.otf" id="8_ylsql"]
-[ext_resource type="PackedScene" uid="uid://dwak76m1bp6gm" path="res://scenes/pause_menu.tscn" id="9_2tptg"]
+[ext_resource type="PackedScene" uid="uid://dwak76m1bp6gm" path="res://scenes/screens/pause_menu.tscn" id="9_2tptg"]
 [ext_resource type="PackedScene" uid="uid://cbf504jokb3hu" path="res://scenes/objects/giant_gold.tscn" id="10_kiwqh"]
-[ext_resource type="PackedScene" uid="uid://cqpiyhf2x6lj1" path="res://scenes/lost_screen.tscn" id="11_hech3"]
-[ext_resource type="PackedScene" uid="uid://chqawjpjc5bji" path="res://scenes/win_screen.tscn" id="12_jm8fe"]
+[ext_resource type="PackedScene" uid="uid://cqpiyhf2x6lj1" path="res://scenes/screens/lost_screen.tscn" id="11_hech3"]
+[ext_resource type="PackedScene" uid="uid://chqawjpjc5bji" path="res://scenes/screens/win_screen.tscn" id="12_jm8fe"]
+[ext_resource type="PackedScene" uid="uid://43t2cabbk8nt" path="res://scenes/dynamite_ui.tscn" id="15_s6chy"]
 
 [node name="stage1" type="Node2D" unique_id=41017793]
 script = ExtResource("1_k3p0l")
@@ -107,6 +108,16 @@ offset_bottom = -240.0
 theme_override_fonts/font = ExtResource("8_ylsql")
 theme_override_font_sizes/font_size = 24
 text = "Goal: x"
+
+[node name="DynamiteUI" parent="." unique_id=1976093421 instance=ExtResource("15_s6chy")]
+z_index = -1
+anchors_preset = 10
+anchor_bottom = 0.0
+offset_left = 100.0
+offset_top = -270.0
+offset_right = 100.0
+offset_bottom = -270.0
+grow_vertical = 1
 
 [node name="PauseMenu" parent="." unique_id=1244187670 instance=ExtResource("9_2tptg")]
 visible = false
