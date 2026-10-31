@@ -15,13 +15,16 @@ var stage_variants = {
 		"res://scenes/stage_1b.tscn"
 	],
 	1:[
-		"res://scenes/stage_2.tscn"
+		"res://scenes/stage_2a.tscn",
+		"res://scenes/stage_2b.tscn"
 	],
 	2:[
-		"res://scenes/stage_3.tscn"
+		"res://scenes/stage_3a.tscn",
+		"res://scenes/stage_3b.tscn"
 	],
 	3:[
-		"res://scenes/stage_4.tscn"
+		"res://scenes/stage_4a.tscn",
+		"res://scenes/stage_4b.tscn"
 	]
 }
 

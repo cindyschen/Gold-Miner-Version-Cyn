@@ -34,40 +34,40 @@ one_shot = true
 [node name="Objects" type="Node2D" parent="." unique_id=898619204]
 
 [node name="gold" parent="Objects" unique_id=902899429 instance=ExtResource("4_6q1wn")]
-position = Vector2(-256, 103)
+position = Vector2(297, 100)
 
 [node name="biggold" parent="Objects" unique_id=1789849383 instance=ExtResource("5_xas6n")]
-position = Vector2(-279, 224)
+position = Vector2(402, -1.9999924)
 
 [node name="biggold3" parent="Objects" unique_id=2044267571 instance=ExtResource("6_gsnjb")]
-position = Vector2(-173, 153)
+position = Vector2(-133, 76)
 
 [node name="biggold2" parent="Objects" unique_id=436064378 instance=ExtResource("5_xas6n")]
-position = Vector2(-381.99997, 135.99998)
+position = Vector2(-445, 81)
 
 [node name="smallGold" parent="Objects" unique_id=2146324579 instance=ExtResource("7_wy4ti")]
-position = Vector2(-323, -97)
+position = Vector2(262.99994, 5.9999924)
 
 [node name="smallGold2" parent="Objects" unique_id=1215789616 instance=ExtResource("7_wy4ti")]
-position = Vector2(-303, 0.9999981)
+position = Vector2(-385, -71)
 
 [node name="bigrock" parent="Objects" unique_id=477113559 instance=ExtResource("8_3codq")]
-position = Vector2(422, -2.999998)
+position = Vector2(228, 212)
 
 [node name="bigrock2" parent="Objects" unique_id=236354149 instance=ExtResource("8_3codq")]
-position = Vector2(275, 168)
+position = Vector2(-281, 188.99998)
 
 [node name="rock" parent="Objects" unique_id=1751139347 instance=ExtResource("9_agrde")]
-position = Vector2(347, -54)
+position = Vector2(137, 85)
 
 [node name="rock2" parent="Objects" unique_id=637794298 instance=ExtResource("9_agrde")]
-position = Vector2(135.00003, 205)
+position = Vector2(441, 103)
 
 [node name="rock3" parent="Objects" unique_id=2062430323 instance=ExtResource("9_agrde")]
-position = Vector2(319, 37.000004)
+position = Vector2(-301, 24)
 
 [node name="giantGold" parent="Objects" unique_id=877602950 instance=ExtResource("10_hep3o")]
-position = Vector2(-2, 224)
+position = Vector2(-2, 218)
 scale = Vector2(0.9999999, 0.9999999)
 
 [node name="Labels" type="Node2D" parent="." unique_id=1669983485]

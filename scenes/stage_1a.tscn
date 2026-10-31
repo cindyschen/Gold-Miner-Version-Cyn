@@ -34,40 +34,37 @@ one_shot = true
 [node name="Objects" type="Node2D" parent="." unique_id=898619204]
 
 [node name="gold" parent="Objects" unique_id=902899429 instance=ExtResource("4_mmpjy")]
-position = Vector2(-256, 103)
-
-[node name="biggold" parent="Objects" unique_id=1789849383 instance=ExtResource("5_awd1g")]
-position = Vector2(-279, 224)
+position = Vector2(-305, 9.536743e-07)
 
 [node name="biggold3" parent="Objects" unique_id=2044267571 instance=ExtResource("6_ll2by")]
-position = Vector2(-173, 153)
-
-[node name="biggold2" parent="Objects" unique_id=436064378 instance=ExtResource("5_awd1g")]
-position = Vector2(-381.99997, 135.99998)
+position = Vector2(-333, 136)
 
 [node name="smallGold" parent="Objects" unique_id=2146324579 instance=ExtResource("7_pkatc")]
-position = Vector2(-323, -97)
+position = Vector2(-394, -80)
 
 [node name="smallGold2" parent="Objects" unique_id=1215789616 instance=ExtResource("7_pkatc")]
-position = Vector2(-303, 0.9999981)
+position = Vector2(-187, 212)
+
+[node name="biggold" parent="Objects" unique_id=1903433500 instance=ExtResource("5_awd1g")]
+position = Vector2(-173, 77)
 
 [node name="bigrock" parent="Objects" unique_id=477113559 instance=ExtResource("8_gujos")]
-position = Vector2(422, -2.999998)
+position = Vector2(363, 121)
 
 [node name="bigrock2" parent="Objects" unique_id=236354149 instance=ExtResource("8_gujos")]
-position = Vector2(275, 168)
+position = Vector2(215, 66)
 
 [node name="rock" parent="Objects" unique_id=1751139347 instance=ExtResource("9_mn6xo")]
-position = Vector2(347, -54)
+position = Vector2(454, -57)
+
+[node name="rock3" parent="Objects" unique_id=1840411654 instance=ExtResource("9_mn6xo")]
+position = Vector2(314, -53)
 
 [node name="rock2" parent="Objects" unique_id=637794298 instance=ExtResource("9_mn6xo")]
 position = Vector2(135.00003, 205)
 
-[node name="rock3" parent="Objects" unique_id=2062430323 instance=ExtResource("9_mn6xo")]
-position = Vector2(319, 37.000004)
-
 [node name="giantGold" parent="Objects" unique_id=877602950 instance=ExtResource("10_gosmr")]
-position = Vector2(-2, 224)
+position = Vector2(-16, 172)
 scale = Vector2(0.9999999, 0.9999999)
 
 [node name="Labels" type="Node2D" parent="." unique_id=1669983485]

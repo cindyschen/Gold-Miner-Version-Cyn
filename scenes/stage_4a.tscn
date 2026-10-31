@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://chqawjpjc5bji" path="res://scenes/screens/win_screen.tscn" id="15_xytn1"]
 [ext_resource type="PackedScene" uid="uid://43t2cabbk8nt" path="res://scenes/dynamite_ui.tscn" id="16_8a0da"]
 
-[node name="stage4" type="Node2D" unique_id=41017793]
+[node name="stage4a" type="Node2D" unique_id=41017793]
 script = ExtResource("1_ueffo")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=321520134]
@@ -32,9 +32,6 @@ one_shot = true
 [node name="Objects" type="Node2D" parent="." unique_id=898619204]
 
 [node name="smallrock" parent="Objects" unique_id=646107139 instance=ExtResource("7_3t81i")]
-position = Vector2(-177, 79)
-
-[node name="smallrock3" parent="Objects" unique_id=902899429 instance=ExtResource("7_3t81i")]
 position = Vector2(-177, 79)
 
 [node name="smallrock4" parent="Objects" unique_id=1719897115 instance=ExtResource("7_3t81i")]
@@ -136,7 +133,6 @@ visible = false
 
 [node name="WinScreen" parent="." unique_id=983766163 instance=ExtResource("15_xytn1")]
 visible = false
-next_stage = "res://scenes/stage_5.tscn"
 
 [node name="DynamiteUI" parent="." unique_id=1976093421 instance=ExtResource("16_8a0da")]
 z_index = -1

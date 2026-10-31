@@ -12,4 +12,4 @@ func _ready():
 	else:
 		retract_speed = 300
 	
-	points = randi_range(50, 500)
+	points = randi_range(100, 500)

@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://b8pqf1j7x11wb"]
+
+[ext_resource type="Script" uid="uid://h30topmttrnc" path="res://scripts/stage.gd" id="1_up21n"]
+[ext_resource type="PackedScene" uid="uid://kv0rqte28qkt" path="res://scenes/player.tscn" id="2_u24dg"]
+[ext_resource type="PackedScene" uid="uid://ctfyjy061ool" path="res://scenes/claw.tscn" id="3_pbye1"]
+[ext_resource type="PackedScene" uid="uid://botblmta3vhof" path="res://scenes/objects/biggoldii.tscn" id="4_5e0v6"]
+[ext_resource type="FontFile" uid="uid://co840at5ck4b2" path="res://assets/fonts/Refuel Eb Cond.otf" id="4_i8f4w"]
+[ext_resource type="PackedScene" uid="uid://dwak76m1bp6gm" path="res://scenes/screens/pause_menu.tscn" id="5_5e0v6"]
+[ext_resource type="PackedScene" uid="uid://cqr6s2ng4ivi4" path="res://scenes/objects/biggold.tscn" id="5_lfqo4"]
+[ext_resource type="Script" uid="uid://bl452ktrkekli" path="res://scripts/lost_screen.gd" id="6_lfqo4"]
+[ext_resource type="PackedScene" uid="uid://cbf504jokb3hu" path="res://scenes/objects/giant_gold.tscn" id="6_nkmov"]
+[ext_resource type="PackedScene" uid="uid://du3bob4qqi0k8" path="res://scenes/objects/mystery_bag.tscn" id="7_mt7je"]
+[ext_resource type="PackedScene" uid="uid://cqpiyhf2x6lj1" path="res://scenes/screens/lost_screen.tscn" id="7_nkmov"]
+[ext_resource type="PackedScene" uid="uid://chqawjpjc5bji" path="res://scenes/screens/win_screen.tscn" id="8_mt7je"]
+[ext_resource type="PackedScene" uid="uid://43t2cabbk8nt" path="res://scenes/dynamite_ui.tscn" id="9_xgtwr"]
+
+[node name="stage4b" type="Node2D" unique_id=41017793]
+script = ExtResource("1_up21n")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=321520134]
+
+[node name="Player" parent="." unique_id=513096976 instance=ExtResource("2_u24dg")]
+position = Vector2(-1, -269)
+
+[node name="claw" parent="." unique_id=1343461891 instance=ExtResource("3_pbye1")]
+position = Vector2(2, -221)
+
+[node name="Timer" type="Timer" parent="." unique_id=1784494850]
+wait_time = 30.0
+one_shot = true
+
+[node name="Objects" type="Node2D" parent="." unique_id=898619204]
+
+[node name="biggold2" parent="Objects" unique_id=902899429 instance=ExtResource("4_5e0v6")]
+position = Vector2(-325, 67)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="biggold3" parent="Objects" unique_id=1896944665 instance=ExtResource("4_5e0v6")]
+position = Vector2(83, 12)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="biggold" parent="Objects" unique_id=579928425 instance=ExtResource("5_lfqo4")]
+position = Vector2(-193, -74)
+
+[node name="biggold4" parent="Objects" unique_id=608144136 instance=ExtResource("5_lfqo4")]
+position = Vector2(462, 99.00001)
+
+[node name="giantGold" parent="Objects" unique_id=1000561605 instance=ExtResource("6_nkmov")]
+position = Vector2(418, -69)
+
+[node name="giantGold2" parent="Objects" unique_id=101794525 instance=ExtResource("6_nkmov")]
+position = Vector2(-412, -46.000004)
+
+[node name="giantGold3" parent="Objects" unique_id=993078027 instance=ExtResource("6_nkmov")]
+position = Vector2(-374, 214)
+
+[node name="giantGold5" parent="Objects" unique_id=168804198 instance=ExtResource("6_nkmov")]
+position = Vector2(-105.99997, 239)
+
+[node name="giantGold6" parent="Objects" unique_id=1776800148 instance=ExtResource("6_nkmov")]
+position = Vector2(-57, 70)
+
+[node name="giantGold7" parent="Objects" unique_id=118272455 instance=ExtResource("6_nkmov")]
+position = Vector2(104.999985, 221.99998)
+
+[node name="giantGold8" parent="Objects" unique_id=1232864677 instance=ExtResource("6_nkmov")]
+position = Vector2(333, 226)
+
+[node name="giantGold9" parent="Objects" unique_id=1746394532 instance=ExtResource("6_nkmov")]
+position = Vector2(239, 64)
+
+[node name="MysteryBag" parent="Objects" unique_id=1621838040 instance=ExtResource("7_mt7je")]
+position = Vector2(250, -64)
+
+[node name="MysteryBag2" parent="Objects" unique_id=1121143339 instance=ExtResource("7_mt7je")]
+position = Vector2(-206, 34.999992)
+
+[node name="Labels" type="Node2D" parent="." unique_id=1669983485]
+
+[node name="StageLabel" type="Label" parent="Labels" unique_id=1205865145]
+offset_left = -560.0
+offset_top = -320.0
+offset_right = -360.0
+offset_bottom = -290.0
+theme_override_fonts/font = ExtResource("4_i8f4w")
+theme_override_font_sizes/font_size = 24
+text = "Stage: 4
+"
+
+[node name="ScoreLabel" type="Label" parent="Labels" unique_id=1118279030]
+offset_left = -560.0
+offset_top = -295.0
+offset_right = -360.0
+offset_bottom = -265.0
+theme_override_fonts/font = ExtResource("4_i8f4w")
+theme_override_font_sizes/font_size = 24
+text = "Score: x"
+
+[node name="TimerLabel" type="Label" parent="Labels" unique_id=272326]
+offset_left = -560.0
+offset_top = -245.0
+offset_right = -360.0
+offset_bottom = -215.0
+theme_override_fonts/font = ExtResource("4_i8f4w")
+theme_override_font_sizes/font_size = 24
+text = "Time Remaining: x"
+
+[node name="GoalLabel" type="Label" parent="Labels" unique_id=1586037711]
+offset_left = -560.0
+offset_top = -270.0
+offset_right = -360.0
+offset_bottom = -240.0
+theme_override_fonts/font = ExtResource("4_i8f4w")
+theme_override_font_sizes/font_size = 24
+text = "Goal: x"
+
+[node name="PauseMenu" parent="." unique_id=1244187670 instance=ExtResource("5_5e0v6")]
+visible = false
+script = ExtResource("6_lfqo4")
+
+[node name="LostScreen" parent="." unique_id=726103261 instance=ExtResource("7_nkmov")]
+visible = false
+
+[node name="WinScreen" parent="." unique_id=983766163 instance=ExtResource("8_mt7je")]
+visible = false
+
+[node name="DynamiteUI" parent="." unique_id=1976093421 instance=ExtResource("9_xgtwr")]
+z_index = -1
+anchors_preset = 10
+anchor_bottom = 0.0
+offset_left = 70.0
+offset_top = -270.0
+offset_right = 70.0
+offset_bottom = -270.0
+grow_vertical = 1
+
+[node name="Dynamite" type="Node2D" parent="." unique_id=1459992516]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
