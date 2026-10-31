@@ -28,4 +28,4 @@ func updateMoney():
 
 func _on_continue_button_pressed() -> void:
 	get_tree().paused = false
-	get_tree().change_scene_to_file(GameManager.next_stage)
+	GameManager.next_stage()

@@ -2,7 +2,7 @@ extends Control
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/stage_1.tscn")
+	GameManager.next_stage()
 	
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()

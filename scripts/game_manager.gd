@@ -6,12 +6,30 @@ var score = 0
 var goals = [300,1000,2000,3000]
 var stage = 0
 var dynamite = 0
-var next_stage: String = "res://scenes/stage_2.tscn"
 var strength = 1
 var time = 30
 
+var stage_variants = {
+	0:[
+		"res://scenes/stage_1a.tscn",
+		"res://scenes/stage_1b.tscn"
+	],
+	1:[
+		"res://scenes/stage_2.tscn"
+	],
+	2:[
+		"res://scenes/stage_3.tscn"
+	],
+	3:[
+		"res://scenes/stage_4.tscn"
+	]
+}
+
 signal dynamite_changed()
 signal money_changed
+
+func next_stage():
+	get_tree().change_scene_to_file(stage_variants[stage].pick_random())
 
 func add_points(points: int):
 	score += points
