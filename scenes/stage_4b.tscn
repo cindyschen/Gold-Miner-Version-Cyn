@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cbf504jokb3hu" path="res://scenes/objects/giant_gold.tscn" id="6_nkmov"]
 [ext_resource type="PackedScene" uid="uid://du3bob4qqi0k8" path="res://scenes/objects/mystery_bag.tscn" id="7_mt7je"]
 [ext_resource type="PackedScene" uid="uid://cqpiyhf2x6lj1" path="res://scenes/screens/lost_screen.tscn" id="7_nkmov"]
+[ext_resource type="PackedScene" uid="uid://cr7camf0iuxdr" path="res://scenes/objects/smallrock.tscn" id="8_5e0v6"]
 [ext_resource type="PackedScene" uid="uid://chqawjpjc5bji" path="res://scenes/screens/win_screen.tscn" id="8_mt7je"]
 [ext_resource type="PackedScene" uid="uid://43t2cabbk8nt" path="res://scenes/dynamite_ui.tscn" id="9_xgtwr"]
 
@@ -35,17 +36,17 @@ position = Vector2(-325, 67)
 scale = Vector2(0.9999999, 0.9999999)
 
 [node name="biggold3" parent="Objects" unique_id=1896944665 instance=ExtResource("4_5e0v6")]
-position = Vector2(83, 12)
+position = Vector2(205, 89)
 scale = Vector2(0.9999999, 0.9999999)
 
 [node name="biggold" parent="Objects" unique_id=579928425 instance=ExtResource("5_lfqo4")]
-position = Vector2(-193, -74)
+position = Vector2(-245, -66)
 
 [node name="biggold4" parent="Objects" unique_id=608144136 instance=ExtResource("5_lfqo4")]
 position = Vector2(462, 99.00001)
 
 [node name="giantGold" parent="Objects" unique_id=1000561605 instance=ExtResource("6_nkmov")]
-position = Vector2(418, -69)
+position = Vector2(410, -33.000004)
 
 [node name="giantGold2" parent="Objects" unique_id=101794525 instance=ExtResource("6_nkmov")]
 position = Vector2(-412, -46.000004)
@@ -57,22 +58,28 @@ position = Vector2(-374, 214)
 position = Vector2(-105.99997, 239)
 
 [node name="giantGold6" parent="Objects" unique_id=1776800148 instance=ExtResource("6_nkmov")]
-position = Vector2(-57, 70)
+position = Vector2(-34, 74)
 
 [node name="giantGold7" parent="Objects" unique_id=118272455 instance=ExtResource("6_nkmov")]
 position = Vector2(104.999985, 221.99998)
 
-[node name="giantGold8" parent="Objects" unique_id=1232864677 instance=ExtResource("6_nkmov")]
-position = Vector2(333, 226)
-
 [node name="giantGold9" parent="Objects" unique_id=1746394532 instance=ExtResource("6_nkmov")]
-position = Vector2(239, 64)
+position = Vector2(329, 240.99998)
 
 [node name="MysteryBag" parent="Objects" unique_id=1621838040 instance=ExtResource("7_mt7je")]
-position = Vector2(250, -64)
+position = Vector2(271, -23.000004)
 
 [node name="MysteryBag2" parent="Objects" unique_id=1121143339 instance=ExtResource("7_mt7je")]
-position = Vector2(-206, 34.999992)
+position = Vector2(-199, 70)
+
+[node name="smallrock" parent="Objects" unique_id=1231906254 instance=ExtResource("8_5e0v6")]
+position = Vector2(147, -23)
+
+[node name="smallrock2" parent="Objects" unique_id=2089201075 instance=ExtResource("8_5e0v6")]
+position = Vector2(-96.99999, -57)
+
+[node name="smallrock3" parent="Objects" unique_id=415774477 instance=ExtResource("8_5e0v6")]
+position = Vector2(-283, -149)
 
 [node name="Labels" type="Node2D" parent="." unique_id=1669983485]
 

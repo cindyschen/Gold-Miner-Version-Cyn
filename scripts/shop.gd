@@ -1,8 +1,12 @@
 extends Control
 
-const DYNAMITE= preload("res://scenes/shop_items/shop_dynamite.tscn")
-const ENERGY_DRINK= preload("res://scenes/shop_items/shop_energy_drink.tscn")
-const HOURGLASS = preload("res://scenes/shop_items/shop_hourglass.tscn")
+const SHOP_ITEMS = [
+	{"scene": preload("res://scenes/shop_items/shop_dynamite.tscn"), "chance": 80},
+	{"scene": preload("res://scenes/shop_items/shop_energy_drink.tscn"), "chance": 30},
+	{"scene": preload("res://scenes/shop_items/shop_hourglass.tscn"), "chance": 30},
+	{"scene": preload("res://scenes/shop_items/shop_elixir.tscn"), "chance": 50},
+	{"scene": preload("res://scenes/shop_items/shop_hammer.tscn"), "chance": 60}
+]
 @onready var items_container: HBoxContainer = $PanelContainer/VBoxContainer/ItemsContainer
 @onready var money_label: RichTextLabel = $PanelContainer/VBoxContainer/MoneyLabel
 
@@ -10,18 +14,11 @@ const HOURGLASS = preload("res://scenes/shop_items/shop_hourglass.tscn")
 func _ready() -> void:
 	GameManager.money_changed.connect(updateMoney)
 	money_label.text = "Money: $" + str(GameManager.score)
-	var sell_dynamite = randi_range(0,1)
-	if sell_dynamite == 1:
-		var dynamite = DYNAMITE.instantiate()
-		items_container.add_child(dynamite)
-	var sell_energy_drink = randi_range(0,1)
-	if sell_energy_drink == 1:
-		var energy_drink = ENERGY_DRINK.instantiate()
-		items_container.add_child(energy_drink)
-	var sell_hourglass = randi_range(0,1)
-	if sell_hourglass == 1:
-		var hourglass = HOURGLASS.instantiate()
-		items_container.add_child(hourglass)
+	for item in SHOP_ITEMS:
+		var random_number = randi_range(0, 100)
+		if random_number <= item["chance"]:
+			var new_item = item["scene"].instantiate()
+			items_container.add_child(new_item)
 		
 func updateMoney():
 	money_label.text = "Money: $" + str(GameManager.score)

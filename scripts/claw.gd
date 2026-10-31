@@ -83,6 +83,8 @@ func _process(delta: float) -> void:
 			GameManager.use_dynamite()
 		position = position.move_toward(start_position, object_retract_speed*delta)
 		if position.is_equal_approx(start_position):
+			if object.is_in_group("diamond"):
+				print("got diamond")
 			GameManager.add_points(object.points)
 			object.queue_free()
 			position = start_position

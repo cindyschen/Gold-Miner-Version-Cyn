@@ -8,6 +8,8 @@ var stage = 0
 var dynamite = 0
 var strength = 1
 var time = 30
+var diamond_multiplier = 1
+var rock_multiplier = 1
 
 var stage_variants = {
 	0:[
@@ -65,4 +67,10 @@ func energy_drink():
 	
 func hourglass():
 	time = 45
+	
+func elixir():
+	diamond_multiplier = 2
+	
+func hammer():
+	rock_multiplier = 3
 	

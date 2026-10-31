@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cs08t5vddf2m3"]
+
+[ext_resource type="Script" uid="uid://j18mb8ve4khf" path="res://scripts/shop_hammer.gd" id="1_3ncs7"]
+[ext_resource type="Texture2D" uid="uid://b0ndm518osin7" path="res://assets/sprites/hammer.png" id="2_3ncs7"]
+[ext_resource type="Texture2D" uid="uid://b366a564nnlgh" path="res://assets/sprites/hammerhover.png" id="3_3ncs7"]
+[ext_resource type="Texture2D" uid="uid://qrn5ofes5v6l" path="res://assets/sprites/hammerdisabled.png" id="4_m6455"]
+[ext_resource type="Theme" uid="uid://cy1hwpgarqqen" path="res://scenes/menu.tres" id="5_sw3qs"]
+
+[node name="shopHammer" type="VBoxContainer" unique_id=898806892]
+custom_minimum_size = Vector2(144, 144)
+offset_right = 144.0
+offset_bottom = 144.0
+script = ExtResource("1_3ncs7")
+
+[node name="shopHammerButton" type="TextureButton" parent="." unique_id=971062216]
+custom_minimum_size = Vector2(144, 144)
+layout_mode = 2
+texture_normal = ExtResource("2_3ncs7")
+texture_hover = ExtResource("3_3ncs7")
+texture_disabled = ExtResource("4_m6455")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="HammerPrice" type="RichTextLabel" parent="." unique_id=1887877009]
+custom_maximum_size = Vector2(144, 144)
+layout_mode = 2
+theme = ExtResource("5_sw3qs")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/line_separation = -15
+theme_override_font_sizes/normal_font_size = 48
+text = "MAXED OUT"
+fit_content = true
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[connection signal="pressed" from="shopHammerButton" to="." method="_on_shop_hammer_button_pressed"]

@@ -23,6 +23,8 @@ func _process(delta: float) -> void:
 func _on_timer_timeout() -> void:
 	GameManager.strength = 1
 	GameManager.time = 30
+	GameManager.diamond_multiplier = 1
+	GameManager.rock_multiplier = 1
 	get_tree().paused = true
 	if GameManager.score >= GameManager.goals[GameManager.stage]:
 		win_screen.show()

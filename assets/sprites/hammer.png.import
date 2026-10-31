@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv7kjpom3sxnh"
-path="res://.godot/imported/energydrinkhover.png-64583a5bd631ce49cc64ba94fae8f820.ctex"
+uid="uid://b0ndm518osin7"
+path="res://.godot/imported/hammer.png-16afc7bf4e3617f1c1023f5c4fbfa7ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/shop_items/energydrinkhover.png"
-dest_files=["res://.godot/imported/energydrinkhover.png-64583a5bd631ce49cc64ba94fae8f820.ctex"]
+source_file="res://assets/sprites/hammer.png"
+dest_files=["res://.godot/imported/hammer.png-16afc7bf4e3617f1c1023f5c4fbfa7ea.ctex"]
 
 [params]
 
