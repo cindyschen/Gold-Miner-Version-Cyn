@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://cgbdegacgmexk" path="res://scripts/shop.gd" id="1_xfvoa"]
 [ext_resource type="Theme" uid="uid://cy1hwpgarqqen" path="res://scenes/menu.tres" id="2_1l46r"]
-[ext_resource type="PackedScene" uid="uid://ba2uuopscuilt" path="res://scenes/shop_items/shop_dynamite.tscn" id="3_1l46r"]
 
 [node name="Shop" type="Control" unique_id=1244187670]
 process_mode = 3
@@ -63,9 +62,6 @@ custom_maximum_size = Vector2(700, -1)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
-
-[node name="shopDynamite" parent="PanelContainer/VBoxContainer/ItemsContainer" unique_id=898806892 instance=ExtResource("3_1l46r")]
-layout_mode = 2
 
 [node name="ContinueButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=476491006]
 custom_minimum_size = Vector2(300, 0)
