@@ -20,3 +20,6 @@ region_rect = Rect2(3, 22, 10, 9)
 position = Vector2(-2.0000002, 0)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_1jbac")
+
+[node name="topPoint" type="Marker2D" parent="." unique_id=373581152]
+position = Vector2(0, -13.000004)

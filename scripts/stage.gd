@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 	timer_label.text = "Time Remaining: " + str(int(timer.time_left))
 
 func _on_timer_timeout() -> void:
+	GameManager.strength = 1
 	get_tree().paused = true
 	if GameManager.score >= GameManager.goals[GameManager.stage]:
 		win_screen.show()

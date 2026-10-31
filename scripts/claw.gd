@@ -7,6 +7,10 @@ const RETRACT_SPEED = 1000
 const PADDING = 100
 const DYNAMITE= preload("res://scenes/objects/dynamite.tscn")
 const DYNAMITE_SPEED = 1000
+const LEFT_CLOSED_CLAW= preload("res://assets/sprites/leftclosedclaw.png")
+const RIGHT_CLOSED_CLAW = preload("res://assets/sprites/rightclosedclaw.png")
+const LEFT_OPEN_CLAW= preload("res://assets/sprites/clawleft.png")
+const RIGHT_OPEN_CLAW = preload("res://assets/sprites/clawright.png")
 
 var direction = Vector2.DOWN
 var dropping = false
@@ -18,10 +22,12 @@ var global_start_position: Vector2
 var object_retract_speed = 600
 var object: Area2D
 
-@onready var dynamite_folder: Node2D = $"../../Dynamite"
-@onready var line: Line2D = $"../Line2D"
-@onready var ray_cast: RayCast2D = $RayCast2D
-@onready var pickup_point: Marker2D = $"../Marker2D"
+@onready var dynamite_folder: Node2D = $"../Dynamite"
+@onready var line: Line2D = $Line2D
+@onready var ray_cast: RayCast2D = $ClawRight/RayCast2D
+@onready var pickup_point: Marker2D = $Marker2D
+@onready var claw_left: Sprite2D = $ClawLeft
+@onready var claw_right: Sprite2D = $ClawRight
 
 func _ready() -> void:
 	start_position = position
@@ -31,7 +37,7 @@ func _process(delta: float) -> void:
 	var screen_size = get_viewport_rect().size
 	line.clear_points()
 	line.add_point(Vector2.ZERO)
-	line.add_point(position)
+	line.add_point(to_local(global_start_position))
 	if not dropping and not retracting and not object_retracting:
 		swing_time += delta
 		rotation = deg_to_rad(SWING_ANGLE) * sin(swing_time * SWING_SPEED)
@@ -41,17 +47,23 @@ func _process(delta: float) -> void:
 	elif dropping:
 		if ray_cast.is_colliding():
 			object = ray_cast.get_collider()
-			object_retract_speed = object.retract_speed
+			object_retract_speed = object.retract_speed * GameManager.strength
 			
 			object.reparent(self)
-			object.position = pickup_point.position
+			claw_left.z_index = 2
+			claw_left.texture = LEFT_CLOSED_CLAW
+			claw_right.texture = RIGHT_CLOSED_CLAW
+			
+			object.position = pickup_point.position - object.get_node("topPoint").position
+			
+			object.rotation = 0
 			
 			object_retracting = true
 			dropping = false
 			retracting = false
 			print("collision")
 		position += direction * DROP_SPEED *delta
-		if position.y > screen_size.y - PADDING or position.x > screen_size.x/2 or position.x < -screen_size.x/2:
+		if position.y > screen_size.y/2 or position.x > screen_size.x/2 or position.x < -screen_size.x/2:
 			dropping = false
 			retracting = true
 	elif retracting:
@@ -60,6 +72,7 @@ func _process(delta: float) -> void:
 			position = start_position
 			retracting = false
 	elif object_retracting:
+		object.z_index = 1
 		if Input.is_action_just_pressed("throw_dynamite") and GameManager.dynamite > 0:
 			print("dynamite thrown!")
 			var dynamite = DYNAMITE.instantiate()
@@ -74,9 +87,13 @@ func _process(delta: float) -> void:
 			object.queue_free()
 			position = start_position
 			object_retracting = false
+			claw_left.texture = LEFT_OPEN_CLAW
+			claw_right.texture = RIGHT_OPEN_CLAW
 			
 func _on_dynamite_hit():
 	object_retracting = false
 	retracting = true
+	claw_left.texture = LEFT_OPEN_CLAW
+	claw_right.texture = RIGHT_OPEN_CLAW
 	
 		

@@ -7,6 +7,7 @@ var goals = [300,1000,2000,3000]
 var stage = 0
 var dynamite = 0
 var next_stage: String = "res://scenes/stage_2.tscn"
+var strength = 1
 
 signal dynamite_changed()
 signal money_changed
@@ -28,3 +29,7 @@ func use_dynamite():
 func add_dynamite():
 	dynamite+= 1
 	dynamite_changed.emit()
+	
+func energy_drink():
+	strength = 2
+	

@@ -1,19 +1,28 @@
 [gd_scene format=3 uid="uid://ctfyjy061ool"]
 
-[ext_resource type="Texture2D" uid="uid://bnwvfnhrfksca" path="res://assets/sprites/claw.png" id="1_nge5k"]
+[ext_resource type="Texture2D" uid="uid://engdt2iug6ul" path="res://assets/sprites/clawleft.png" id="1_pq2vu"]
 [ext_resource type="Script" uid="uid://bkfkw233nnj8l" path="res://scripts/claw.gd" id="2_nge5k"]
+[ext_resource type="Texture2D" uid="uid://cxpchogbp1vw5" path="res://assets/sprites/clawright.png" id="3_xrky6"]
 
 [node name="claw" type="Node2D" unique_id=1343461891]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1008676281]
-position = Vector2(1.1920929e-07, -2.3841858e-07)
-scale = Vector2(3, 3)
-texture = ExtResource("1_nge5k")
-offset = Vector2(0, 6)
-region_rect = Rect2(20, 16, 9, 16)
+z_index = 1
 script = ExtResource("2_nge5k")
 
-[node name="RayCast2D" type="RayCast2D" parent="Sprite2D" unique_id=99864328]
+[node name="ClawLeft" type="Sprite2D" parent="." unique_id=116019074]
+position = Vector2(4.7683716e-07, -9.536743e-07)
+scale = Vector2(3, 3)
+texture = ExtResource("1_pq2vu")
+offset = Vector2(0, 6)
+region_rect = Rect2(20, 16, 9, 16)
+
+[node name="ClawRight" type="Sprite2D" parent="." unique_id=1008676281]
+position = Vector2(1.1920929e-07, -2.3841858e-07)
+scale = Vector2(3, 3)
+texture = ExtResource("3_xrky6")
+offset = Vector2(0, 6)
+region_rect = Rect2(20, 16, 9, 16)
+
+[node name="RayCast2D" type="RayCast2D" parent="ClawRight" unique_id=99864328]
 position = Vector2(-2.9802322e-08, 5.9604645e-08)
 scale = Vector2(0.19999999, 0.19999999)
 target_position = Vector2(-4.967054e-08, 23.333334)
@@ -23,6 +32,6 @@ collide_with_areas = true
 position = Vector2(0, 13)
 
 [node name="Line2D" type="Line2D" parent="." unique_id=774703332]
-points = PackedVector2Array(1, -3)
+points = PackedVector2Array(0, 0)
 width = 3.0
 default_color = Color(0.1882353, 0.1882353, 0.1882353, 1)

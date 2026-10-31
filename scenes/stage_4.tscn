@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://bk8ifx3nkntaj"]
+
+[ext_resource type="Script" uid="uid://h30topmttrnc" path="res://scripts/stage.gd" id="1_ueffo"]
+[ext_resource type="PackedScene" uid="uid://kv0rqte28qkt" path="res://scenes/player.tscn" id="2_gmd21"]
+[ext_resource type="PackedScene" uid="uid://ctfyjy061ool" path="res://scenes/claw.tscn" id="3_go1kt"]
+[ext_resource type="PackedScene" uid="uid://cr7camf0iuxdr" path="res://scenes/objects/smallrock.tscn" id="7_3t81i"]
+[ext_resource type="PackedScene" uid="uid://21xw4mhf2kd" path="res://scenes/objects/rock.tscn" id="8_meoxw"]
+[ext_resource type="PackedScene" uid="uid://crnhtjpenxksn" path="res://scenes/objects/diamond.tscn" id="9_cnide"]
+[ext_resource type="PackedScene" uid="uid://c8lyxo4oc1np1" path="res://scenes/objects/bigrock.tscn" id="10_24egl"]
+[ext_resource type="FontFile" uid="uid://co840at5ck4b2" path="res://assets/fonts/Refuel Eb Cond.otf" id="11_flq71"]
+[ext_resource type="PackedScene" uid="uid://dwak76m1bp6gm" path="res://scenes/screens/pause_menu.tscn" id="12_4ik21"]
+[ext_resource type="Script" uid="uid://bl452ktrkekli" path="res://scripts/lost_screen.gd" id="13_s3rdd"]
+[ext_resource type="PackedScene" uid="uid://cqpiyhf2x6lj1" path="res://scenes/screens/lost_screen.tscn" id="14_ou6lq"]
+[ext_resource type="PackedScene" uid="uid://chqawjpjc5bji" path="res://scenes/screens/win_screen.tscn" id="15_xytn1"]
+[ext_resource type="PackedScene" uid="uid://43t2cabbk8nt" path="res://scenes/dynamite_ui.tscn" id="16_8a0da"]
+
+[node name="stage4" type="Node2D" unique_id=41017793]
+script = ExtResource("1_ueffo")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=321520134]
+
+[node name="Player" parent="." unique_id=513096976 instance=ExtResource("2_gmd21")]
+position = Vector2(-1, -269)
+
+[node name="claw" parent="." unique_id=1343461891 instance=ExtResource("3_go1kt")]
+position = Vector2(2, -221)
+
+[node name="Timer" type="Timer" parent="." unique_id=1784494850]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[node name="Objects" type="Node2D" parent="." unique_id=898619204]
+
+[node name="smallrock" parent="Objects" unique_id=646107139 instance=ExtResource("7_3t81i")]
+position = Vector2(-177, 79)
+
+[node name="smallrock3" parent="Objects" unique_id=902899429 instance=ExtResource("7_3t81i")]
+position = Vector2(-177, 79)
+
+[node name="smallrock4" parent="Objects" unique_id=1719897115 instance=ExtResource("7_3t81i")]
+position = Vector2(426, -118)
+
+[node name="smallrock5" parent="Objects" unique_id=1627054408 instance=ExtResource("7_3t81i")]
+position = Vector2(277, 52.999996)
+
+[node name="smallrock2" parent="Objects" unique_id=1393811022 instance=ExtResource("7_3t81i")]
+position = Vector2(-422, 64)
+
+[node name="rock" parent="Objects" unique_id=1751139347 instance=ExtResource("8_meoxw")]
+position = Vector2(-16.99997, 137.99998)
+
+[node name="rock2" parent="Objects" unique_id=1763591371 instance=ExtResource("8_meoxw")]
+position = Vector2(-268.99994, 3.000002)
+
+[node name="rock3" parent="Objects" unique_id=1983406448 instance=ExtResource("8_meoxw")]
+position = Vector2(193, -50)
+
+[node name="rock4" parent="Objects" unique_id=1413819556 instance=ExtResource("8_meoxw")]
+position = Vector2(378, -18.999998)
+
+[node name="diamond" parent="Objects" unique_id=615436765 instance=ExtResource("9_cnide")]
+position = Vector2(-192, 174)
+
+[node name="diamond2" parent="Objects" unique_id=1516280796 instance=ExtResource("9_cnide")]
+position = Vector2(-338, 65)
+
+[node name="diamond7" parent="Objects" unique_id=1110360094 instance=ExtResource("9_cnide")]
+position = Vector2(-448, -18.999996)
+
+[node name="diamond3" parent="Objects" unique_id=360178596 instance=ExtResource("9_cnide")]
+position = Vector2(9.000004, 240)
+
+[node name="diamond4" parent="Objects" unique_id=1783329263 instance=ExtResource("9_cnide")]
+position = Vector2(213, 188)
+
+[node name="diamond5" parent="Objects" unique_id=2138178035 instance=ExtResource("9_cnide")]
+position = Vector2(368, 90)
+
+[node name="diamond6" parent="Objects" unique_id=2137539654 instance=ExtResource("9_cnide")]
+position = Vector2(483, -5.000001)
+
+[node name="bigrock" parent="Objects" unique_id=414728984 instance=ExtResource("10_24egl")]
+position = Vector2(-404.99994, -93.999985)
+
+[node name="bigrock2" parent="Objects" unique_id=1652920952 instance=ExtResource("10_24egl")]
+position = Vector2(-76, -13.999998)
+
+[node name="bigrock3" parent="Objects" unique_id=761703097 instance=ExtResource("10_24egl")]
+position = Vector2(103, 52)
+
+[node name="Labels" type="Node2D" parent="." unique_id=1669983485]
+
+[node name="StageLabel" type="Label" parent="Labels" unique_id=1205865145]
+offset_left = -560.0
+offset_top = -320.0
+offset_right = -360.0
+offset_bottom = -290.0
+theme_override_fonts/font = ExtResource("11_flq71")
+theme_override_font_sizes/font_size = 24
+text = "Stage: 4
+"
+
+[node name="ScoreLabel" type="Label" parent="Labels" unique_id=1118279030]
+offset_left = -560.0
+offset_top = -295.0
+offset_right = -360.0
+offset_bottom = -265.0
+theme_override_fonts/font = ExtResource("11_flq71")
+theme_override_font_sizes/font_size = 24
+text = "Score: x"
+
+[node name="TimerLabel" type="Label" parent="Labels" unique_id=272326]
+offset_left = -560.0
+offset_top = -245.0
+offset_right = -360.0
+offset_bottom = -215.0
+theme_override_fonts/font = ExtResource("11_flq71")
+theme_override_font_sizes/font_size = 24
+text = "Time Remaining: x"
+
+[node name="GoalLabel" type="Label" parent="Labels" unique_id=1586037711]
+offset_left = -560.0
+offset_top = -270.0
+offset_right = -360.0
+offset_bottom = -240.0
+theme_override_fonts/font = ExtResource("11_flq71")
+theme_override_font_sizes/font_size = 24
+text = "Goal: x"
+
+[node name="PauseMenu" parent="." unique_id=1244187670 instance=ExtResource("12_4ik21")]
+visible = false
+script = ExtResource("13_s3rdd")
+
+[node name="LostScreen" parent="." unique_id=726103261 instance=ExtResource("14_ou6lq")]
+visible = false
+
+[node name="WinScreen" parent="." unique_id=983766163 instance=ExtResource("15_xytn1")]
+visible = false
+next_stage = "res://scenes/stage_5.tscn"
+
+[node name="DynamiteUI" parent="." unique_id=1976093421 instance=ExtResource("16_8a0da")]
+z_index = -1
+anchors_preset = 10
+anchor_bottom = 0.0
+offset_left = 70.0
+offset_top = -270.0
+offset_right = 70.0
+offset_bottom = -270.0
+grow_vertical = 1
+
+[node name="Dynamite" type="Node2D" parent="." unique_id=1459992516]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

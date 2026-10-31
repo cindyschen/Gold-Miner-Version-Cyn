@@ -19,3 +19,6 @@ region_rect = Rect2(3, 22, 10, 9)
 position = Vector2(2.0000002, 5.0000005)
 rotation = 1.4992378
 shape = SubResource("CircleShape2D_gyhte")
+
+[node name="topPoint" type="Marker2D" parent="." unique_id=112271383]
+position = Vector2(0, -34.000004)

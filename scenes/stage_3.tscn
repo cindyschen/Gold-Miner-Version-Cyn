@@ -122,6 +122,7 @@ visible = false
 
 [node name="WinScreen" parent="." unique_id=983766163 instance=ExtResource("12_4g8we")]
 visible = false
+next_stage = "res://scenes/stage_4.tscn"
 
 [node name="DynamiteUI" parent="." unique_id=1976093421 instance=ExtResource("16_e25t1")]
 z_index = -1

@@ -1,6 +1,7 @@
 extends Control
 
 const DYNAMITE= preload("res://scenes/shop_items/shop_dynamite.tscn")
+const ENERGY_DRINK= preload("res://scenes/shop_items/shop_energy_drink.tscn")
 @onready var items_container: HBoxContainer = $PanelContainer/VBoxContainer/ItemsContainer
 @onready var money_label: RichTextLabel = $PanelContainer/VBoxContainer/MoneyLabel
 
@@ -12,6 +13,10 @@ func _ready() -> void:
 	if sell_dynamite == 1:
 		var dynamite = DYNAMITE.instantiate()
 		items_container.add_child(dynamite)
+	var sell_energy_drink = randi_range(0,1)
+	if sell_energy_drink == 1:
+		var energy_drink = ENERGY_DRINK.instantiate()
+		items_container.add_child(energy_drink)
 		
 func updateMoney():
 	money_label.text = "Money: $" + str(GameManager.score)

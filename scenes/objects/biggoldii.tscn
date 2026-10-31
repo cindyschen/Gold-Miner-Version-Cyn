@@ -18,3 +18,6 @@ region_rect = Rect2(3, 22, 10, 9)
 [node name="bigGold2Collision" type="CollisionShape2D" parent="." unique_id=83312666]
 position = Vector2(3.5527137e-15, -1.1920929e-07)
 shape = SubResource("CircleShape2D_vjdtw")
+
+[node name="topPoint" type="Marker2D" parent="." unique_id=989640399]
+position = Vector2(0, -23)

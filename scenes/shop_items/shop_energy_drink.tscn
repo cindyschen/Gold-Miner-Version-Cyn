@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cx44w7gp5nopc"]
+
+[ext_resource type="Script" uid="uid://22oiwq3u5uik" path="res://scripts/shop_energy_drink.gd" id="1_xybim"]
+[ext_resource type="Texture2D" uid="uid://bc70uga2guxua" path="res://assets/sprites/energydrink.png" id="2_3ywhq"]
+[ext_resource type="Texture2D" uid="uid://bsgkyq4u8tshh" path="res://assets/sprites/energydrinkhover.png" id="3_3ywhq"]
+[ext_resource type="Texture2D" uid="uid://0e35buiear73" path="res://assets/sprites/energydrinkdisabled.png" id="4_qykv4"]
+[ext_resource type="Theme" uid="uid://cy1hwpgarqqen" path="res://scenes/menu.tres" id="5_745wc"]
+
+[node name="shopEnergyDrink" type="VBoxContainer" unique_id=898806892]
+custom_minimum_size = Vector2(144, 144)
+offset_right = 144.0
+offset_bottom = 144.0
+script = ExtResource("1_xybim")
+
+[node name="shopEnergyDrinkButton" type="TextureButton" parent="." unique_id=1145347719]
+custom_minimum_size = Vector2(144, 144)
+layout_mode = 2
+texture_normal = ExtResource("2_3ywhq")
+texture_hover = ExtResource("3_3ywhq")
+texture_disabled = ExtResource("4_qykv4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="EnergyDrinkPrice" type="RichTextLabel" parent="." unique_id=1887877009]
+custom_maximum_size = Vector2(144, 144)
+layout_mode = 2
+theme = ExtResource("5_745wc")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/line_separation = -15
+theme_override_font_sizes/normal_font_size = 48
+text = "MAXED OUT"
+fit_content = true
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[connection signal="pressed" from="shopEnergyDrinkButton" to="." method="_on_shop_energy_drink_button_pressed"]

@@ -19,3 +19,6 @@ region_rect = Rect2(3, 22, 10, 9)
 position = Vector2(-1.1920927e-07, 4.5)
 scale = Vector2(0.9999995, 0.9999995)
 shape = SubResource("RectangleShape2D_7f5ga")
+
+[node name="topPoint" type="Marker2D" parent="." unique_id=1586985668]
+position = Vector2(0, -7.000001)

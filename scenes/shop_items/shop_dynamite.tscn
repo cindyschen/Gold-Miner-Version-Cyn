@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ba2uuopscuilt"]
 
 [ext_resource type="Script" uid="uid://d1qxei57yutw7" path="res://scripts/shop_dynamite.gd" id="1_tlngg"]
-[ext_resource type="Texture2D" uid="uid://b70rrq86q0mhn" path="res://assets/sprites/shopdynamitehighlight.png" id="2_tkvyb"]
+[ext_resource type="Texture2D" uid="uid://b70rrq86q0mhn" path="res://assets/sprites/shopdynamitehover.png" id="2_tkvyb"]
 [ext_resource type="Texture2D" uid="uid://bvohyyao7mkp5" path="res://assets/sprites/shopdynamite.png" id="2_tlngg"]
 [ext_resource type="Texture2D" uid="uid://cjc5w4dq27qek" path="res://assets/sprites/shopdynamitedisabled.png" id="4_hk01b"]
 [ext_resource type="Theme" uid="uid://cy1hwpgarqqen" path="res://scenes/menu.tres" id="4_u67qp"]
