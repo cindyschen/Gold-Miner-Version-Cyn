@@ -48,17 +48,17 @@ fit_content = true
 horizontal_alignment = 1
 
 [node name="MoneyLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=1751381219]
-custom_maximum_size = Vector2(-1, 39)
+custom_minimum_size = Vector2(0, 100)
+custom_maximum_size = Vector2(-1, 100)
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 32
 text = "Money: x"
 fit_content = true
 scroll_active = false
-horizontal_alignment = 2
 
 [node name="ItemsContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=767749244]
-custom_minimum_size = Vector2(700, 251)
-custom_maximum_size = Vector2(700, -1)
+custom_minimum_size = Vector2(800, 251)
+custom_maximum_size = Vector2(800, -1)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3

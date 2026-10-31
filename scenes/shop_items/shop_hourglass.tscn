@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://begwvs483juqv"]
+
+[ext_resource type="Script" uid="uid://co2tyg1au08rh" path="res://scripts/shop_hourglass.gd" id="1_nmlxo"]
+[ext_resource type="Texture2D" uid="uid://dqcv2oap0dspf" path="res://assets/sprites/hourglass.png" id="2_nmlxo"]
+[ext_resource type="Texture2D" uid="uid://dsipb5s7om10y" path="res://assets/sprites/hourglasshover.png" id="3_nmlxo"]
+[ext_resource type="Texture2D" uid="uid://b4fltg8ly0lio" path="res://assets/sprites/hourglassdisabled.png" id="4_riqwa"]
+[ext_resource type="Theme" uid="uid://cy1hwpgarqqen" path="res://scenes/menu.tres" id="5_f46oy"]
+
+[node name="shopHourglass" type="VBoxContainer" unique_id=898806892]
+custom_minimum_size = Vector2(144, 144)
+offset_right = 144.0
+offset_bottom = 144.0
+script = ExtResource("1_nmlxo")
+
+[node name="shopHourglassButton" type="TextureButton" parent="." unique_id=971062216]
+custom_minimum_size = Vector2(144, 144)
+layout_mode = 2
+texture_normal = ExtResource("2_nmlxo")
+texture_hover = ExtResource("3_nmlxo")
+texture_disabled = ExtResource("4_riqwa")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="HourglassPrice" type="RichTextLabel" parent="." unique_id=1887877009]
+custom_maximum_size = Vector2(144, 144)
+layout_mode = 2
+theme = ExtResource("5_f46oy")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/line_separation = -15
+theme_override_font_sizes/normal_font_size = 48
+text = "MAXED OUT"
+fit_content = true
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[connection signal="pressed" from="shopHourglassButton" to="." method="_on_shop_hourglass_button_pressed"]

@@ -30,7 +30,6 @@ position = Vector2(2, -221)
 [node name="Timer" type="Timer" parent="." unique_id=1784494850]
 wait_time = 30.0
 one_shot = true
-autostart = true
 
 [node name="Objects" type="Node2D" parent="." unique_id=898619204]
 

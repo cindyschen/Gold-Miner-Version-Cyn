@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://kv0rqte28qkt" path="res://scenes/player.tscn" id="2_sv3jd"]
 [ext_resource type="PackedScene" uid="uid://ctfyjy061ool" path="res://scenes/claw.tscn" id="3_fbmvv"]
 [ext_resource type="PackedScene" uid="uid://cqr6s2ng4ivi4" path="res://scenes/objects/biggold.tscn" id="4_5gc2f"]
+[ext_resource type="PackedScene" uid="uid://du3bob4qqi0k8" path="res://scenes/objects/mystery_bag.tscn" id="4_gmy77"]
 [ext_resource type="PackedScene" uid="uid://cttvt45eq8t20" path="res://scenes/objects/smallgold.tscn" id="5_gmy77"]
 [ext_resource type="PackedScene" uid="uid://21xw4mhf2kd" path="res://scenes/objects/rock.tscn" id="6_bgl7i"]
 [ext_resource type="PackedScene" uid="uid://cbf504jokb3hu" path="res://scenes/objects/giant_gold.tscn" id="7_sv3jd"]
@@ -30,14 +31,17 @@ position = Vector2(2, -221)
 [node name="Timer" type="Timer" parent="." unique_id=1784494850]
 wait_time = 30.0
 one_shot = true
-autostart = true
 
 [node name="Objects" type="Node2D" parent="." unique_id=898619204]
+
+[node name="MysteryBag" parent="Objects" unique_id=902899429 instance=ExtResource("4_gmy77")]
+position = Vector2(194, 166)
+scale = Vector2(0.9999999, 0.9999999)
 
 [node name="biggold" parent="Objects" unique_id=1789849383 instance=ExtResource("4_5gc2f")]
 position = Vector2(427.99997, 144.99998)
 
-[node name="biggold2" parent="Objects" unique_id=902899429 instance=ExtResource("4_5gc2f")]
+[node name="biggold2" parent="Objects" unique_id=275777863 instance=ExtResource("4_5gc2f")]
 position = Vector2(-338, 14.000008)
 
 [node name="smallGold" parent="Objects" unique_id=2146324579 instance=ExtResource("5_gmy77")]
@@ -68,7 +72,7 @@ position = Vector2(324.99997, 227.99998)
 position = Vector2(321.99997, 93.99999)
 
 [node name="smallrock" parent="Objects" unique_id=2142927055 instance=ExtResource("9_5gc2f")]
-position = Vector2(-282, -69)
+position = Vector2(-234, -30.000004)
 
 [node name="Labels" type="Node2D" parent="." unique_id=1669983485]
 

@@ -5,11 +5,12 @@ extends Node2D
 @onready var goal_label: Label = $Labels/GoalLabel
 @onready var lost_screen: Control = $LostScreen
 @onready var win_screen: Control = $WinScreen
-
 @onready var timer: Timer = $Timer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	timer.wait_time = GameManager.time
+	timer.start()
 	score_label.text = "Score: " + str(GameManager.score)
 	goal_label.text = "Goal: " + str(GameManager.goals[GameManager.stage])
 
@@ -21,6 +22,7 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	GameManager.strength = 1
+	GameManager.time = 30
 	get_tree().paused = true
 	if GameManager.score >= GameManager.goals[GameManager.stage]:
 		win_screen.show()

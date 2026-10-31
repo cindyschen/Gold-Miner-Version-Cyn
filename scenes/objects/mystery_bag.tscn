@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://du3bob4qqi0k8"]
+
+[ext_resource type="Script" uid="uid://we7c008y7po6" path="res://scripts/mystery_bag.gd" id="1_lrhva"]
+[ext_resource type="Texture2D" uid="uid://bkl3hhpq0bopp" path="res://assets/sprites/mysterybag.png" id="2_8yrvn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j3wf8"]
+radius = 28.0
+height = 70.0
+
+[node name="MysteryBag" type="Area2D" unique_id=902899429]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("1_lrhva")
+
+[node name="mysteryBagSprite" type="Sprite2D" parent="." unique_id=1651758820]
+scale = Vector2(3, 3)
+texture = ExtResource("2_8yrvn")
+region_rect = Rect2(3, 22, 10, 9)
+
+[node name="mysteryBagCollision" type="CollisionShape2D" parent="." unique_id=83312666]
+position = Vector2(5.9604645e-08, 3.0000002)
+shape = SubResource("CapsuleShape2D_j3wf8")
+
+[node name="topPoint" type="Marker2D" parent="." unique_id=240182380]
+position = Vector2(0, -23.000002)
