@@ -77,6 +77,7 @@ func _process(delta: float) -> void:
 			print("dynamite thrown!")
 			var dynamite = DYNAMITE.instantiate()
 			dynamite_folder.add_child(dynamite)
+			dynamite.target = object
 			dynamite.dynamite_hit.connect(_on_dynamite_hit)
 			dynamite.global_position = global_start_position
 			dynamite.direction = Vector2.DOWN.rotated(rotation)
