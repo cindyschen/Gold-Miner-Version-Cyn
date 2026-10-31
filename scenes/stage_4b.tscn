@@ -7,7 +7,6 @@
 [ext_resource type="FontFile" uid="uid://co840at5ck4b2" path="res://assets/fonts/Refuel Eb Cond.otf" id="4_i8f4w"]
 [ext_resource type="PackedScene" uid="uid://dwak76m1bp6gm" path="res://scenes/screens/pause_menu.tscn" id="5_5e0v6"]
 [ext_resource type="PackedScene" uid="uid://cqr6s2ng4ivi4" path="res://scenes/objects/biggold.tscn" id="5_lfqo4"]
-[ext_resource type="Script" uid="uid://bl452ktrkekli" path="res://scripts/lost_screen.gd" id="6_lfqo4"]
 [ext_resource type="PackedScene" uid="uid://cbf504jokb3hu" path="res://scenes/objects/giant_gold.tscn" id="6_nkmov"]
 [ext_resource type="PackedScene" uid="uid://du3bob4qqi0k8" path="res://scenes/objects/mystery_bag.tscn" id="7_mt7je"]
 [ext_resource type="PackedScene" uid="uid://cqpiyhf2x6lj1" path="res://scenes/screens/lost_screen.tscn" id="7_nkmov"]
@@ -116,7 +115,6 @@ text = "Goal: x"
 
 [node name="PauseMenu" parent="." unique_id=1244187670 instance=ExtResource("5_5e0v6")]
 visible = false
-script = ExtResource("6_lfqo4")
 
 [node name="LostScreen" parent="." unique_id=726103261 instance=ExtResource("7_nkmov")]
 visible = false

@@ -31,6 +31,14 @@ var stage_variants = {
 signal dynamite_changed()
 signal money_changed
 
+func restart():
+	stage = 0
+	score = 0
+	dynamite = 0
+	strength = 1
+	time = 30
+	next_stage()
+
 func next_stage():
 	get_tree().change_scene_to_file(stage_variants[stage].pick_random())
 

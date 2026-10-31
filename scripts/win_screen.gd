@@ -10,7 +10,7 @@ func _on_continue_button_pressed() -> void:
 
 func _on_restart_button_pressed() -> void:
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://scenes/stage_1.tscn")
+	GameManager.restart()
 	
 func _on_menu_button_pressed() -> void:
 	get_tree().paused = false
