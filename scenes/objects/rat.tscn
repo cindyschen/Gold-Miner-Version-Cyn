@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://qei3q0vqum4i"]
+
+[ext_resource type="Script" uid="uid://c5c8egv8035r2" path="res://scripts/rat.gd" id="1_erb5t"]
+[ext_resource type="Texture2D" uid="uid://ds818pcvpll8p" path="res://assets/sprites/rat.png" id="2_erb5t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_erb5t"]
+size = Vector2(60.5, 37.000008)
+
+[node name="rat" type="Area2D" unique_id=902899429]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("1_erb5t")
+
+[node name="ratSprite" type="Sprite2D" parent="." unique_id=1651758820]
+scale = Vector2(3, 3)
+texture = ExtResource("2_erb5t")
+region_rect = Rect2(3, 22, 10, 9)
+
+[node name="ratCollision" type="CollisionShape2D" parent="." unique_id=563610428]
+position = Vector2(5.9604645e-08, 1)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_erb5t")
+
+[node name="topPoint" type="Marker2D" parent="." unique_id=515813238]
+position = Vector2(0, -13.000004)
+
+[node name="waitTimer" type="Timer" parent="." unique_id=1918437248]
+wait_time = 0.5
+one_shot = true

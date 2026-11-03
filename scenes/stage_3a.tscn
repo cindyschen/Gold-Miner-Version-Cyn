@@ -111,6 +111,19 @@ theme_override_fonts/font = ExtResource("11_nc0yp")
 theme_override_font_sizes/font_size = 24
 text = "Goal: x"
 
+[node name="PrizeLabel" type="Label" parent="Labels" unique_id=2042418642]
+offset_left = -134.0
+offset_top = -286.0
+offset_right = -60.0
+offset_bottom = -247.0
+theme_override_colors/font_color = Color(0.105882354, 0.7372549, 0, 1)
+theme_override_fonts/font = ExtResource("11_nc0yp")
+theme_override_font_sizes/font_size = 32
+
+[node name="PrizeTimer" type="Timer" parent="Labels/PrizeLabel" unique_id=1415656514]
+wait_time = 0.8
+one_shot = true
+
 [node name="PauseMenu" parent="." unique_id=1244187670 instance=ExtResource("12_foy6k")]
 visible = false
 

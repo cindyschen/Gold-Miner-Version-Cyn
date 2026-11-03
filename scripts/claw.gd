@@ -22,6 +22,8 @@ var global_start_position: Vector2
 var object_retract_speed = 600
 var object: Area2D
 
+signal object_collected(object_points: int)
+
 @onready var dynamite_folder: Node2D = $"../Dynamite"
 @onready var line: Line2D = $Line2D
 @onready var ray_cast: RayCast2D = $ClawRight/RayCast2D
@@ -84,6 +86,7 @@ func _process(delta: float) -> void:
 			GameManager.use_dynamite()
 		position = position.move_toward(start_position, object_retract_speed*delta)
 		if position.is_equal_approx(start_position):
+			object_collected.emit(object.points)
 			if object.is_in_group("diamond"):
 				print("got diamond")
 			GameManager.add_points(object.points)

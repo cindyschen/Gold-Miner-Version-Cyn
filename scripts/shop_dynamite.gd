@@ -17,7 +17,7 @@ func update():
 		return
 	if GameManager.dynamite == GameManager.MAX_DYNAMITES:
 		shop_dynamite_button.disabled = true
-		dynamite_price.text = "MAXED OUT"
+		dynamite_price.text = "MAXED"
 	elif GameManager.score < price:
 		shop_dynamite_button.disabled = true
 		dynamite_price.add_theme_color_override("default_color", Color.RED)

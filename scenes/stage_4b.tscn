@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cqpiyhf2x6lj1" path="res://scenes/screens/lost_screen.tscn" id="7_nkmov"]
 [ext_resource type="PackedScene" uid="uid://cr7camf0iuxdr" path="res://scenes/objects/smallrock.tscn" id="8_5e0v6"]
 [ext_resource type="PackedScene" uid="uid://chqawjpjc5bji" path="res://scenes/screens/win_screen.tscn" id="8_mt7je"]
+[ext_resource type="PackedScene" uid="uid://qei3q0vqum4i" path="res://scenes/objects/rat.tscn" id="9_lfqo4"]
 [ext_resource type="PackedScene" uid="uid://43t2cabbk8nt" path="res://scenes/dynamite_ui.tscn" id="9_xgtwr"]
 
 [node name="stage4b" type="Node2D" unique_id=41017793]
@@ -81,6 +82,10 @@ position = Vector2(-96.99999, -57)
 [node name="smallrock3" parent="Objects" unique_id=415774477 instance=ExtResource("8_5e0v6")]
 position = Vector2(-283, -149)
 
+[node name="rat" parent="Objects" unique_id=1662758228 instance=ExtResource("9_lfqo4")]
+position = Vector2(106.99999, -122)
+distance = 100
+
 [node name="Labels" type="Node2D" parent="." unique_id=1669983485]
 
 [node name="StageLabel" type="Label" parent="Labels" unique_id=1205865145]
@@ -119,6 +124,19 @@ offset_bottom = -240.0
 theme_override_fonts/font = ExtResource("4_i8f4w")
 theme_override_font_sizes/font_size = 24
 text = "Goal: x"
+
+[node name="PrizeLabel" type="Label" parent="Labels" unique_id=1435738032]
+offset_left = -134.0
+offset_top = -286.0
+offset_right = -60.0
+offset_bottom = -247.0
+theme_override_colors/font_color = Color(0.105882354, 0.7372549, 0, 1)
+theme_override_fonts/font = ExtResource("4_i8f4w")
+theme_override_font_sizes/font_size = 32
+
+[node name="PrizeTimer" type="Timer" parent="Labels/PrizeLabel" unique_id=434363920]
+wait_time = 0.8
+one_shot = true
 
 [node name="PauseMenu" parent="." unique_id=1244187670 instance=ExtResource("5_5e0v6")]
 visible = false

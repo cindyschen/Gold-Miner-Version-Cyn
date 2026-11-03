@@ -31,34 +31,25 @@ theme = ExtResource("2_1l46r")
 theme_type_variation = &"ShopPanelContainer"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=726857646]
-custom_minimum_size = Vector2(0, 600)
-custom_maximum_size = Vector2(-1, 600)
+custom_minimum_size = Vector2(1000, 600)
+custom_maximum_size = Vector2(1000, 600)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="ShopLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=1020998780]
-custom_minimum_size = Vector2(1000, 0)
-layout_mode = 2
-size_flags_vertical = 0
-offset_transform_enabled = true
-theme_override_constants/outline_size = 12
-text = "SHOP"
-fit_content = true
-horizontal_alignment = 1
-
 [node name="MoneyLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=1751381219]
-custom_minimum_size = Vector2(0, 100)
-custom_maximum_size = Vector2(-1, 100)
+custom_minimum_size = Vector2(0, 220)
+custom_maximum_size = Vector2(-1, 300)
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 32
 text = "Money: x"
 fit_content = true
 scroll_active = false
+horizontal_alignment = 2
 
 [node name="ItemsContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=767749244]
-custom_minimum_size = Vector2(800, 251)
-custom_maximum_size = Vector2(800, -1)
+custom_minimum_size = Vector2(1000, 251)
+custom_maximum_size = Vector2(1000, -1)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
