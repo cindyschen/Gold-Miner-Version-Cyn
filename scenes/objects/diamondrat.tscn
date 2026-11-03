@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cdx0k6354gl43"]
+
+[ext_resource type="Script" uid="uid://cahrudh377oeo" path="res://scripts/diamondrat.gd" id="1_cu3kc"]
+[ext_resource type="Texture2D" uid="uid://bfiw8733jj86p" path="res://assets/sprites/diamondrat-sheet.png" id="2_cu3kc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkxap"]
+atlas = ExtResource("2_cu3kc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tf8y4"]
+atlas = ExtResource("2_cu3kc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwbrp"]
+atlas = ExtResource("2_cu3kc")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t2q5"]
+atlas = ExtResource("2_cu3kc")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1he41"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkxap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tf8y4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwbrp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8t2q5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_erb5t"]
+size = Vector2(51.00003, 35.000023)
+
+[node name="diamondrat" type="Area2D" unique_id=902899429]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("1_cu3kc")
+
+[node name="diamondratSprite" type="AnimatedSprite2D" parent="." unique_id=1562307401]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_1he41")
+autoplay = "default"
+frame = 1
+frame_progress = 0.076205745
+
+[node name="diamondratCollision" type="CollisionShape2D" parent="." unique_id=563610428]
+position = Vector2(-1.5000029, 2.5000012)
+scale = Vector2(0.9999992, 0.9999992)
+shape = SubResource("RectangleShape2D_erb5t")
+
+[node name="topPoint" type="Marker2D" parent="." unique_id=515813238]
+position = Vector2(2, -21.000002)
+
+[node name="waitTimer" type="Timer" parent="." unique_id=1918437248]
+wait_time = 0.8
+one_shot = true

@@ -51,7 +51,9 @@ func _process(delta: float) -> void:
 			object = ray_cast.get_collider()
 			object_retract_speed = object.retract_speed * GameManager.strength
 			
+			var flip_x = object.scale.x
 			object.reparent(self)
+			object.scale = Vector2(flip_x, 1)
 			claw_left.z_index = 2
 			claw_left.texture = LEFT_CLOSED_CLAW
 			claw_right.texture = RIGHT_CLOSED_CLAW

@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://h30topmttrnc" path="res://scripts/stage.gd" id="1_jacyh"]
 [ext_resource type="PackedScene" uid="uid://kv0rqte28qkt" path="res://scenes/player.tscn" id="2_2gxf4"]
 [ext_resource type="PackedScene" uid="uid://ctfyjy061ool" path="res://scenes/claw.tscn" id="3_gdl6f"]
+[ext_resource type="PackedScene" uid="uid://cdx0k6354gl43" path="res://scenes/objects/diamondrat.tscn" id="4_2gxf4"]
+[ext_resource type="PackedScene" uid="uid://qei3q0vqum4i" path="res://scenes/objects/rat.tscn" id="4_gdl6f"]
 [ext_resource type="PackedScene" uid="uid://bkslawutkk48" path="res://scenes/objects/gold.tscn" id="4_mmpjy"]
 [ext_resource type="PackedScene" uid="uid://cqr6s2ng4ivi4" path="res://scenes/objects/biggold.tscn" id="5_awd1g"]
 [ext_resource type="PackedScene" uid="uid://botblmta3vhof" path="res://scenes/objects/biggoldii.tscn" id="6_ll2by"]
@@ -33,7 +35,12 @@ one_shot = true
 
 [node name="Objects" type="Node2D" parent="." unique_id=898619204]
 
-[node name="gold" parent="Objects" unique_id=902899429 instance=ExtResource("4_mmpjy")]
+[node name="rat" parent="Objects" unique_id=902899429 instance=ExtResource("4_gdl6f")]
+
+[node name="diamondrat" parent="Objects" unique_id=1605966304 instance=ExtResource("4_2gxf4")]
+position = Vector2(-69.99999, -68.99999)
+
+[node name="gold" parent="Objects" unique_id=385594416 instance=ExtResource("4_mmpjy")]
 position = Vector2(-305, 9.536743e-07)
 
 [node name="biggold3" parent="Objects" unique_id=2044267571 instance=ExtResource("6_ll2by")]
