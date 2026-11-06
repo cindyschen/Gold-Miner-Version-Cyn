@@ -15,9 +15,24 @@
 [ext_resource type="PackedScene" uid="uid://dwak76m1bp6gm" path="res://scenes/screens/pause_menu.tscn" id="13_jv0sy"]
 [ext_resource type="PackedScene" uid="uid://cqpiyhf2x6lj1" path="res://scenes/screens/lost_screen.tscn" id="14_571i1"]
 [ext_resource type="PackedScene" uid="uid://chqawjpjc5bji" path="res://scenes/screens/win_screen.tscn" id="15_e4xs3"]
+[ext_resource type="Texture2D" uid="uid://cpdi7oeqqqw0y" path="res://assets/sprites/stagevariant1.png" id="16_2gxf4"]
 
 [node name="stage1a" type="Node2D" unique_id=41017793]
 script = ExtResource("1_jacyh")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=157362363]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -325.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("16_2gxf4")
+expand_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=321520134]
 

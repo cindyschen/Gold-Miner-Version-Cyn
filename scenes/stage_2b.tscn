@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b78vngxfkuts3"]
 
 [ext_resource type="Script" uid="uid://h30topmttrnc" path="res://scripts/stage.gd" id="1_8ekq8"]
+[ext_resource type="Texture2D" uid="uid://cpdi7oeqqqw0y" path="res://assets/sprites/stagevariant1.png" id="2_8ekq8"]
 [ext_resource type="PackedScene" uid="uid://kv0rqte28qkt" path="res://scenes/player.tscn" id="2_n8et0"]
 [ext_resource type="PackedScene" uid="uid://ctfyjy061ool" path="res://scenes/claw.tscn" id="3_kn6me"]
 [ext_resource type="PackedScene" uid="uid://du3bob4qqi0k8" path="res://scenes/objects/mystery_bag.tscn" id="4_1fqm7"]
@@ -17,6 +18,20 @@
 
 [node name="stage2b" type="Node2D" unique_id=41017793]
 script = ExtResource("1_8ekq8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=233086659]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -325.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_8ekq8")
+expand_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=321520134]
 

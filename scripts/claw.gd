@@ -30,6 +30,7 @@ signal object_collected(object_points: int)
 @onready var pickup_point: Marker2D = $Marker2D
 @onready var claw_left: Sprite2D = $ClawLeft
 @onready var claw_right: Sprite2D = $ClawRight
+@onready var player: CharacterBody2D = $"../Player"
 
 func _ready() -> void:
 	start_position = position
@@ -41,6 +42,7 @@ func _process(delta: float) -> void:
 	line.add_point(Vector2(0, 9))
 	line.add_point(to_local(global_start_position))
 	if not dropping and not retracting and not object_retracting:
+		player.idle_animation()
 		swing_time += delta
 		rotation = deg_to_rad(SWING_ANGLE) * sin(swing_time * SWING_SPEED)
 		if Input.is_action_just_pressed("drop_claw"):
@@ -71,11 +73,14 @@ func _process(delta: float) -> void:
 			dropping = false
 			retracting = true
 	elif retracting:
+		player.pull_animation(2)
 		position = position.move_toward(start_position,RETRACT_SPEED*delta)
 		if position.is_equal_approx(start_position):
 			position = start_position
 			retracting = false
 	elif object_retracting:
+		player.pull_animation(min(object_retract_speed / 100, 1))
+		print(max(object_retract_speed / 100, 1))
 		object.z_index = 1
 		if Input.is_action_just_pressed("throw_dynamite") and GameManager.dynamite > 0:
 			print("dynamite thrown!")
