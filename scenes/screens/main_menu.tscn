@@ -36,7 +36,7 @@ custom_minimum_size = Vector2(900, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Gold Miner: Version Cyn
+text = "Mining Capybara
 "
 horizontal_alignment = 1
 vertical_alignment = 1

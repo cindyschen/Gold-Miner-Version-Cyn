@@ -6,7 +6,7 @@ func _ready() -> void:
 	
 func _on_continue_button_pressed() -> void:
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://scenes/shop.tscn")
+	get_tree().change_scene_to_file("res://scenes/screens/shop.tscn")
 
 func _on_restart_button_pressed() -> void:
 	get_tree().paused = false

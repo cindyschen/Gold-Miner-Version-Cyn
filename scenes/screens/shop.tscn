@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://c7mc41iqr7co2"]
+
+[ext_resource type="Script" uid="uid://cgbdegacgmexk" path="res://scripts/shop.gd" id="1_qwbid"]
+[ext_resource type="Theme" uid="uid://cy1hwpgarqqen" path="res://scenes/menu.tres" id="2_yyjo8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xfvoa"]
+content_margin_left = 20.0
+bg_color = Color(1, 0.9801667, 0.83, 0.99607843)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 0.47000003, 0.47000003, 1)
+
+[node name="Shop" type="Control" unique_id=1244187670]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_qwbid")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1712428855]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_yyjo8")
+theme_type_variation = &"ShopPanelContainer"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=726857646]
+custom_minimum_size = Vector2(1000, 600)
+custom_maximum_size = Vector2(1000, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MoneyLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=1751381219]
+custom_minimum_size = Vector2(0, 220)
+custom_maximum_size = Vector2(-1, 300)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "Money: x"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 2
+
+[node name="ItemsContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=767749244]
+custom_minimum_size = Vector2(1000, 251)
+custom_maximum_size = Vector2(1000, 251)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=340281221]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="DescriptionContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=592000156]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_xfvoa")
+
+[node name="Description" type="RichTextLabel" parent="PanelContainer/VBoxContainer/HBoxContainer/DescriptionContainer" unique_id=1878167019]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "zcxzcxcxzcz"
+scroll_active = false
+autowrap_mode = 2
+
+[node name="ContinueButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=476491006]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 10
+offset_transform_enabled = true
+text = "Continue"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]

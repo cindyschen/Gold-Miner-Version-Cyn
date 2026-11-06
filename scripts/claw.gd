@@ -38,7 +38,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var screen_size = get_viewport_rect().size
 	line.clear_points()
-	line.add_point(Vector2.ZERO)
+	line.add_point(Vector2(0, 9))
 	line.add_point(to_local(global_start_position))
 	if not dropping and not retracting and not object_retracting:
 		swing_time += delta

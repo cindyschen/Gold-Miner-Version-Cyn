@@ -2,10 +2,11 @@ extends VBoxContainer
 
 
 @onready var dynamite_price: RichTextLabel = $dynamitePrice
-@onready var shop_dynamite_button: TextureButton = $shopDynamiteButton
+@onready var item_button: TextureButton = $ItemButton
 
 var price = randi_range(50,100)
 var purchased = false
+var description = "This explosive can be used to destroy the object you are retracting. One time use."
 
 func _ready():
 	GameManager.money_changed.connect(update)
@@ -16,20 +17,20 @@ func update():
 	if purchased:
 		return
 	if GameManager.dynamite == GameManager.MAX_DYNAMITES:
-		shop_dynamite_button.disabled = true
+		item_button.disabled = true
 		dynamite_price.text = "MAXED"
 	elif GameManager.score < price:
-		shop_dynamite_button.disabled = true
+		item_button.disabled = true
 		dynamite_price.add_theme_color_override("default_color", Color.RED)
 	else:
-		shop_dynamite_button.disabled = false
+		item_button.disabled = false
 		dynamite_price.add_theme_color_override("default_color", Color.WHITE)
 	
-func _on_shop_dynamite_button_pressed() -> void:
+func _on_item_button_pressed() -> void:
 	if purchased:
 		return
 	purchased = true
 	GameManager.add_dynamite()
 	GameManager.subtract_points(price)
-	shop_dynamite_button.disabled = true
+	item_button.disabled = true
 	dynamite_price.text = "SOLD"

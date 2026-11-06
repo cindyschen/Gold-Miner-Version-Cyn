@@ -9,14 +9,14 @@ z_index = 1
 script = ExtResource("2_nge5k")
 
 [node name="ClawLeft" type="Sprite2D" parent="." unique_id=116019074]
-position = Vector2(4.7683716e-07, -9.536743e-07)
+position = Vector2(0, 12)
 scale = Vector2(3, 3)
 texture = ExtResource("1_pq2vu")
 offset = Vector2(0, 6)
 region_rect = Rect2(20, 16, 9, 16)
 
 [node name="ClawRight" type="Sprite2D" parent="." unique_id=1008676281]
-position = Vector2(1.1920929e-07, -2.3841858e-07)
+position = Vector2(0, 12)
 scale = Vector2(3, 3)
 texture = ExtResource("3_xrky6")
 offset = Vector2(0, 6)
@@ -29,9 +29,10 @@ target_position = Vector2(-4.967054e-08, 23.333334)
 collide_with_areas = true
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1062787217]
-position = Vector2(0, 13)
+position = Vector2(0, 25)
 
 [node name="Line2D" type="Line2D" parent="." unique_id=774703332]
-points = PackedVector2Array(0, 0)
+position = Vector2(0, 3)
+points = PackedVector2Array(0, -3, 0, -3)
 width = 3.0
 default_color = Color(0.1882353, 0.1882353, 0.1882353, 1)
